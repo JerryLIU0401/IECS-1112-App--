@@ -2,33 +2,29 @@ package fcu.app.iecs_1112_app_food;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
+import android.widget.ImageButton;
 
-public class MainActivity extends AppCompatActivity {
+public class MyOrderActivity extends AppCompatActivity {
 
-    private Button btnDemoMyOrder;
+    private ImageButton imgBtnSettings;
 
-    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_my_order);
 
-
-        btnDemoMyOrder = findViewById(R.id.btn_demo_my_order);
+        imgBtnSettings = findViewById(R.id.img_btn_settings);
         View.OnClickListener onClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, MyOrderActivity.class);
+                Intent intent = new Intent(MyOrderActivity.this, SettingActivity.class);
                 startActivity(intent);
+
             }
         };
-
-        btnDemoMyOrder.setOnClickListener(onClickListener);
-
+        imgBtnSettings.setOnClickListener(onClickListener);
     }
 }

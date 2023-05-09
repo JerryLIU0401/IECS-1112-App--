@@ -30,6 +30,5 @@ public class MainActivity extends AppCompatActivity {
 
         btnDemoMyOrder.setOnClickListener(onClickListener);
 
-        System.out.println(123);
     }
 }

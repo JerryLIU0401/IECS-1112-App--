@@ -9,13 +9,16 @@ import android.widget.Button;
 
 public class LoginActivity extends AppCompatActivity {
     private Button register_btn;
+    private Button login_btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         getSupportActionBar().hide();
-        register_btn = findViewById(R.id.register_btn_login);
+        register_btn = findViewById(R.id.register_btn_loginpage);
+        login_btn = findViewById(R.id.login_btn_loginpage);
+
 
         View.OnClickListener onClickRegisterBtnListener = new View.OnClickListener() {
             @Override
@@ -25,7 +28,15 @@ public class LoginActivity extends AppCompatActivity {
             }
         };
 
+        View.OnClickListener onClickLoginBtnListener = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(LoginActivity.this, MainPageActivity.class);
+                startActivity(intent);
+            }
+        };
         register_btn.setOnClickListener(onClickRegisterBtnListener);
+        login_btn.setOnClickListener(onClickLoginBtnListener);
     }
 
 

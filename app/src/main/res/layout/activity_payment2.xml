@@ -51,7 +51,7 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/tv_settings"
+            android:id="@+id/tv_checkout"
             android:layout_width="129dp"
             android:layout_height="40dp"
             android:layout_marginStart="141dp"
@@ -65,7 +65,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageButton
-            android:id="@+id/img_btn"
+            android:id="@+id/ib_return"
             android:layout_width="41dp"
             android:layout_height="35dp"
             android:layout_marginStart="40dp"

@@ -10,7 +10,7 @@ import android.widget.ImageButton;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class PageBarButton extends AppCompatActivity{
+public class PageBarButton extends AppCompatActivity {
     private ImageButton homeBtn;
     private ImageButton settingBtn;
     private ImageButton myOrderBtn;
@@ -28,21 +28,24 @@ public class PageBarButton extends AppCompatActivity{
     }
 
 
-
-    public void setAllBtnClickListener(Context context){
+    public void setAllBtnClickListener(Context context) {
         View.OnClickListener onSettingBtnClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(context, SettingActivity.class);
-                context.startActivity(intent);
+                if (context.getClass() != SettingActivity.class) {
+                    Intent intent = new Intent(context, SettingActivity.class);
+                    context.startActivity(intent);
+                }
             }
         };
 
         View.OnClickListener onHomeBtnClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(context, MainPageActivity.class);
-                context.startActivity(intent);
+                if (context.getClass() != MainPageActivity.class) {
+                    Intent intent = new Intent(context, MainPageActivity.class);
+                    context.startActivity(intent);
+                }
             }
         };
 
@@ -56,18 +59,35 @@ public class PageBarButton extends AppCompatActivity{
         View.OnClickListener onMyOrderBtnClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(context, MyOrderActivity.class);
-                context.startActivity(intent);
+                if (context.getClass() != MyOrderActivity.class) {
+                    Intent intent = new Intent(context, MyOrderActivity.class);
+                    context.startActivity(intent);
+                }
             }
         };
 
-        settingBtn.setOnClickListener(onSettingBtnClickListener);
         homeBtn.setOnClickListener(onHomeBtnClickListener);
+        settingBtn.setOnClickListener(onSettingBtnClickListener);
         phoneBtn.setOnClickListener(onPhoneBtnClickListener);
         myOrderBtn.setOnClickListener(onMyOrderBtnClickListener);
+
+//        if (context.getClass() == SettingActivity.class) {
+//            homeBtn.setOnClickListener(onHomeBtnClickListener);
+//            myOrderBtn.setOnClickListener(onMyOrderBtnClickListener);
+//        } else if (context.getClass() == MainPageActivity.class) {
+//            myOrderBtn.setOnClickListener(onMyOrderBtnClickListener);
+//            settingBtn.setOnClickListener(onSettingBtnClickListener);
+//        } else if (context.getClass() == MyOrderActivity.class) {
+//            homeBtn.setOnClickListener(onHomeBtnClickListener);
+//            settingBtn.setOnClickListener(onSettingBtnClickListener);
+//        }
+//       else if(context.getClass() == PhoneActivity.class){
+//            phoneBtn.setOnClickListener(onPhoneBtnClickListener);
+//        }
+
     }
 
-    public void setLayoutId(int n){
+    public void setLayoutId(int n) {
         layoutId = n;
     }
 }

@@ -10,8 +10,6 @@
         android:id="@+id/linearLayout"
         android:layout_width="0dp"
         android:layout_height="60dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
         android:background="@color/white"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -24,7 +22,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@drawable/ic_home"
+            android:background="@drawable/ic_home_active"
             android:padding="30dp" />
 
         <ImageButton
@@ -49,7 +47,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@drawable/ic_settings_active"
+            android:background="@drawable/ic_setting"
             android:padding="30dp" />
 
 

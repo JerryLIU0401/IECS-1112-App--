@@ -46,33 +46,35 @@
         app:layout_constraintVertical_bias="1.0" />
 
 
-    <LinearLayout
-        android:id="@+id/linearLayout2"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginTop="24dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_settings"
+            android:layout_width="129dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="141dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="141dp"
+            android:text="Checkout"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageButton
             android:id="@+id/img_btn"
             android:layout_width="41dp"
-            android:layout_height="wrap_content"
+            android:layout_height="35dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="20dp"
             android:layout_weight="1"
-            android:background="@drawable/ic_return" />
-
-        <TextView
-            android:id="@+id/tv_settings"
-            android:layout_width="172dp"
-            android:layout_height="match_parent"
-            android:layout_weight="10"
-            android:text="Checkout"
-            android:textAlignment="center"
-            android:textSize="24sp"
-            android:textStyle="bold" />
-    </LinearLayout>
+            android:background="@drawable/ic_return"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
     <ScrollView
@@ -95,22 +97,31 @@
 
                 <ImageButton
                     android:id="@+id/imageButton2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="307dp"
                     android:background="@color/white"
                     android:paddingLeft="10dp"
                     android:paddingTop="10dp"
-                    app:srcCompat="@android:drawable/btn_dialog"
-                    tools:layout_editor_absoluteX="16dp"
-                    tools:layout_editor_absoluteY="16dp" />
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@android:drawable/btn_dialog" />
 
                 <TextView
                     android:id="@+id/textView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="24dp"
                     android:text="Payment Method"
-                    tools:layout_editor_absoluteX="28dp"
-                    tools:layout_editor_absoluteY="83dp" />
+                    android:textColor="@color/black"
+                    android:textSize="26sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageButton2" />
 
                 <ImageView
                     android:id="@+id/imageView6"
@@ -120,12 +131,27 @@
                     tools:layout_editor_absoluteX="40dp"
                     tools:layout_editor_absoluteY="176dp" />
 
+                <TextView
+                    android:id="@+id/tv_card1"
+                    android:layout_width="156dp"
+                    android:layout_height="27dp"
+                    android:layout_marginStart="80dp"
+                    android:layout_marginBottom="20dp"
+                    android:text=".... 0501"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/button1"
+                    app:layout_constraintStart_toStartOf="@+id/button1" />
+
                 <Button
-                    android:id="@+id/button2"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    tools:layout_editor_absoluteX="118dp"
-                    tools:layout_editor_absoluteY="176dp" />
+                    android:id="@+id/button1"
+                    android:layout_width="300dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="24dp"
+                    android:visibility="invisible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView" />
 
                 <ImageView
                     android:id="@+id/imageView7"
@@ -135,12 +161,28 @@
                     tools:layout_editor_absoluteX="40dp"
                     tools:layout_editor_absoluteY="271dp" />
 
+                <TextView
+                    android:id="@+id/tv_card2"
+                    android:layout_width="156dp"
+                    android:layout_height="27dp"
+                    android:layout_marginStart="80dp"
+                    android:layout_marginBottom="20dp"
+                    android:text=".... 9437"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/button2"
+                    app:layout_constraintStart_toStartOf="@+id/button2" />
+
                 <Button
-                    android:id="@+id/button3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    tools:layout_editor_absoluteX="118dp"
-                    tools:layout_editor_absoluteY="352dp" />
+                    android:id="@+id/button2"
+                    android:layout_width="300dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="24dp"
+                    android:visibility="invisible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.507"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/button1" />
 
                 <ImageView
                     android:id="@+id/imageView8"
@@ -150,12 +192,28 @@
                     tools:layout_editor_absoluteX="40dp"
                     tools:layout_editor_absoluteY="352dp" />
 
+                <TextView
+                    android:id="@+id/tv_card3"
+                    android:layout_width="156dp"
+                    android:layout_height="27dp"
+                    android:layout_marginStart="80dp"
+                    android:layout_marginBottom="20dp"
+                    android:text=".... 2048"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/button3"
+                    app:layout_constraintStart_toStartOf="@+id/button3" />
+
                 <Button
-                    android:id="@+id/button4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    tools:layout_editor_absoluteX="118dp"
-                    tools:layout_editor_absoluteY="262dp" />
+                    android:id="@+id/button3"
+                    android:layout_width="300dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="24dp"
+                    android:visibility="invisible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.507"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/button2" />
 
                 <ImageView
                     android:id="@+id/imageView5"
@@ -169,9 +227,13 @@
                     android:id="@+id/textView2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="85dp"
+                    android:layout_marginTop="24dp"
                     android:text="Payment Method"
-                    tools:layout_editor_absoluteX="118dp"
-                    tools:layout_editor_absoluteY="443dp" />
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/button3" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
     </ScrollView>

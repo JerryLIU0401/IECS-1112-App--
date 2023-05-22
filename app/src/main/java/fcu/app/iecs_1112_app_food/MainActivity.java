@@ -11,7 +11,8 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity {
 
     private Button btnDemoMyOrder;
-
+    private Button btnDropTable;
+    private AccountDatabaseHandler accountDatabaseHandler;
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         btnDemoMyOrder = findViewById(R.id.btn_demo_my_order);
+        btnDropTable = findViewById(R.id.drop_table_btn);
         View.OnClickListener onClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -28,7 +30,17 @@ public class MainActivity extends AppCompatActivity {
             }
         };
 
+        View.OnClickListener onDropTableClickListener = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                accountDatabaseHandler = new AccountDatabaseHandler(MainActivity.this);
+                accountDatabaseHandler.open();
+                accountDatabaseHandler.dropTable();
+            }
+        };
+
         btnDemoMyOrder.setOnClickListener(onClickListener);
+        btnDropTable.setOnClickListener(onDropTableClickListener);
 
     }
 }

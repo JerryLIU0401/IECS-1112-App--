@@ -40,7 +40,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cover_rectangle_top"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <View
         android:id="@+id/bottom_menu_bar"
@@ -55,6 +55,7 @@
 
 
     <LinearLayout
+        android:id="@+id/linearLayout4"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginStart="16dp"
@@ -129,7 +130,399 @@
             android:background="@drawable/ic_settings_active"
             android:padding="30dp" />
 
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/center_rectangle"
+        app:layout_constraintEnd_toEndOf="@+id/center_rectangle"
+        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintStart_toStartOf="@+id/center_rectangle"
+        app:layout_constraintTop_toBottomOf="@+id/cover_rectangle_top"
+        app:layout_constraintVertical_bias="0.066">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            app:layout_constraintBottom_toBottomOf="@+id/center_rectangle"
+            app:layout_constraintEnd_toEndOf="@+id/center_rectangle"
+            app:layout_constraintHorizontal_bias="0.48"
+            app:layout_constraintStart_toStartOf="@+id/center_rectangle"
+            app:layout_constraintTop_toBottomOf="@+id/cover_rectangle_top"
+            app:layout_constraintVertical_bias="0.066">
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingLeft="30dp"
+                app:layout_constraintBottom_toBottomOf="@+id/center_rectangle"
+                app:layout_constraintEnd_toEndOf="@+id/center_rectangle"
+                app:layout_constraintHorizontal_bias="0.48"
+                app:layout_constraintStart_toStartOf="@+id/center_rectangle"
+                app:layout_constraintTop_toBottomOf="@+id/cover_rectangle_top"
+                app:layout_constraintVertical_bias="0.066"
+                app:srcCompat="@drawable/fcu_logo" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:padding="10dp"
+                android:text="name"
+                android:textSize="30dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            app:layout_constraintBottom_toBottomOf="@+id/center_rectangle"
+            app:layout_constraintEnd_toEndOf="@+id/center_rectangle"
+            app:layout_constraintHorizontal_bias="0.48"
+            app:layout_constraintStart_toStartOf="@+id/center_rectangle"
+            app:layout_constraintTop_toBottomOf="@+id/cover_rectangle_top"
+            app:layout_constraintVertical_bias="0.066">
+
+            <TextView
+                android:id="@+id/tv_account_setting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:paddingLeft="50dp"
+                android:paddingTop="10dp"
+                android:text="Account settings"
+                android:textSize="20dp"
+                app:layout_constraintBottom_toBottomOf="@+id/center_rectangle"
+                app:layout_constraintEnd_toEndOf="@+id/center_rectangle"
+                app:layout_constraintHorizontal_bias="0.48"
+                app:layout_constraintStart_toStartOf="@+id/center_rectangle"
+                app:layout_constraintTop_toBottomOf="@+id/cover_rectangle_top"
+                app:layout_constraintVertical_bias="0.066"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            app:layout_constraintBottom_toBottomOf="@+id/center_rectangle"
+            app:layout_constraintEnd_toEndOf="@+id/center_rectangle"
+            app:layout_constraintHorizontal_bias="0.48"
+            app:layout_constraintStart_toStartOf="@+id/center_rectangle"
+            app:layout_constraintTop_toBottomOf="@+id/cover_rectangle_top"
+            app:layout_constraintVertical_bias="0.066">
+
+            <TextView
+                android:id="@+id/tv_edit_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.5"
+                android:paddingLeft="50dp"
+                android:paddingTop="10dp"
+                android:text="Edit profile              "
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/center_rectangle"
+                app:layout_constraintEnd_toEndOf="@+id/center_rectangle"
+                app:layout_constraintHorizontal_bias="0.48"
+                app:layout_constraintStart_toStartOf="@+id/center_rectangle"
+                app:layout_constraintTop_toBottomOf="@+id/cover_rectangle_top"
+                app:layout_constraintVertical_bias="0.066"/>
+
+
+            <ImageButton
+                android:id="@+id/edit_profile_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_keyboard_double_arrow_right"
+                android:paddingTop="40dp"
+                android:paddingLeft="20dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            app:layout_constraintBottom_toBottomOf="@+id/center_rectangle"
+            app:layout_constraintEnd_toEndOf="@+id/center_rectangle"
+            app:layout_constraintHorizontal_bias="0.48"
+            app:layout_constraintStart_toStartOf="@+id/center_rectangle"
+            app:layout_constraintTop_toBottomOf="@+id/cover_rectangle_top"
+            app:layout_constraintVertical_bias="0.066">
+
+            <TextView
+                android:id="@+id/tv_change_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.5"
+                android:paddingLeft="50dp"
+                android:paddingTop="10dp"
+                android:text="Change password"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/center_rectangle"
+                app:layout_constraintEnd_toEndOf="@+id/center_rectangle"
+                app:layout_constraintHorizontal_bias="0.48"
+                app:layout_constraintStart_toStartOf="@+id/center_rectangle"
+                app:layout_constraintTop_toBottomOf="@+id/cover_rectangle_top"
+                app:layout_constraintVertical_bias="0.066"/>
+
+
+            <ImageButton
+                android:id="@+id/change_password_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_keyboard_double_arrow_right"
+                android:paddingTop="40dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            app:layout_constraintBottom_toBottomOf="@+id/center_rectangle"
+            app:layout_constraintEnd_toEndOf="@+id/center_rectangle"
+            app:layout_constraintHorizontal_bias="0.48"
+            app:layout_constraintStart_toStartOf="@+id/center_rectangle"
+            app:layout_constraintTop_toBottomOf="@+id/cover_rectangle_top"
+            app:layout_constraintVertical_bias="0.066">
+
+            <TextView
+                android:id="@+id/tv_payment_method"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.5"
+                android:paddingLeft="50dp"
+                android:paddingTop="10dp"
+                android:text="Payment method"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/center_rectangle"
+                app:layout_constraintEnd_toEndOf="@+id/center_rectangle"
+                app:layout_constraintHorizontal_bias="0.48"
+                app:layout_constraintStart_toStartOf="@+id/center_rectangle"
+                app:layout_constraintTop_toBottomOf="@+id/cover_rectangle_top"
+                app:layout_constraintVertical_bias="0.066"/>
+
+
+            <ImageButton
+                android:id="@+id/payment_method_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_keyboard_double_arrow_right"
+                android:paddingTop="40dp"
+                tools:ignore="DuplicateIds" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="6"
+            app:layout_constraintBottom_toBottomOf="@+id/center_rectangle"
+            app:layout_constraintEnd_toEndOf="@+id/center_rectangle"
+            app:layout_constraintHorizontal_bias="0.48"
+            app:layout_constraintStart_toStartOf="@+id/center_rectangle"
+            app:layout_constraintTop_toBottomOf="@+id/cover_rectangle_top"
+            app:layout_constraintVertical_bias="0.066">
+
+            <TextView
+                android:id="@+id/tv_push_notification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.5"
+                android:paddingLeft="50dp"
+                android:paddingTop="10dp"
+                android:text="Push notification           "
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/center_rectangle"
+                app:layout_constraintEnd_toEndOf="@+id/center_rectangle"
+                app:layout_constraintHorizontal_bias="0.48"
+                app:layout_constraintStart_toStartOf="@+id/center_rectangle"
+                app:layout_constraintTop_toBottomOf="@+id/cover_rectangle_top"
+                app:layout_constraintVertical_bias="0.066"/>
+
+            <Switch
+                android:id="@+id/notification_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:checked="true"
+                android:paddingLeft="60dp"
+                android:switchMinWidth="60dp"
+                android:thumb="@drawable/switch_theme"
+                tools:ignore="UseSwitchCompatOrMaterialXml"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            app:layout_constraintBottom_toBottomOf="@+id/center_rectangle"
+            app:layout_constraintEnd_toEndOf="@+id/center_rectangle"
+            app:layout_constraintHorizontal_bias="0.48"
+            app:layout_constraintStart_toStartOf="@+id/center_rectangle"
+            app:layout_constraintTop_toBottomOf="@+id/cover_rectangle_top"
+            app:layout_constraintVertical_bias="0.066">
+
+            <TextView
+                android:id="@+id/tv_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:paddingLeft="50dp"
+                android:paddingTop="10dp"
+                android:text="More"
+                android:textSize="20dp"
+                app:layout_constraintBottom_toBottomOf="@+id/center_rectangle"
+                app:layout_constraintEnd_toEndOf="@+id/center_rectangle"
+                app:layout_constraintHorizontal_bias="0.48"
+                app:layout_constraintStart_toStartOf="@+id/center_rectangle"
+                app:layout_constraintTop_toBottomOf="@+id/cover_rectangle_top"
+                app:layout_constraintVertical_bias="0.066"
+                tools:ignore="InvalidId" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            app:layout_constraintBottom_toBottomOf="@+id/center_rectangle"
+            app:layout_constraintEnd_toEndOf="@+id/center_rectangle"
+            app:layout_constraintHorizontal_bias="0.48"
+            app:layout_constraintStart_toStartOf="@+id/center_rectangle"
+            app:layout_constraintTop_toBottomOf="@+id/cover_rectangle_top"
+            app:layout_constraintVertical_bias="0.066">
+
+            <TextView
+                android:id="@+id/tv_about_us"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.5"
+                android:paddingLeft="50dp"
+                android:paddingTop="10dp"
+                android:text="About us                       "
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/center_rectangle"
+                app:layout_constraintEnd_toEndOf="@+id/center_rectangle"
+                app:layout_constraintHorizontal_bias="0.48"
+                app:layout_constraintStart_toStartOf="@+id/center_rectangle"
+                app:layout_constraintTop_toBottomOf="@+id/cover_rectangle_top"
+                app:layout_constraintVertical_bias="0.066"/>
+
+
+            <ImageButton
+                android:id="@+id/about_us_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_keyboard_double_arrow_right"
+                android:paddingTop="40dp"
+                android:paddingLeft="20dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            app:layout_constraintBottom_toBottomOf="@+id/center_rectangle"
+            app:layout_constraintEnd_toEndOf="@+id/center_rectangle"
+            app:layout_constraintHorizontal_bias="0.48"
+            app:layout_constraintStart_toStartOf="@+id/center_rectangle"
+            app:layout_constraintTop_toBottomOf="@+id/cover_rectangle_top"
+            app:layout_constraintVertical_bias="0.066">
+
+            <TextView
+                android:id="@+id/tv_privacy_policy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.5"
+                android:paddingLeft="50dp"
+                android:paddingTop="10dp"
+                android:text="Privacy policy              "
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/center_rectangle"
+                app:layout_constraintEnd_toEndOf="@+id/center_rectangle"
+                app:layout_constraintHorizontal_bias="0.48"
+                app:layout_constraintStart_toStartOf="@+id/center_rectangle"
+                app:layout_constraintTop_toBottomOf="@+id/cover_rectangle_top"
+                app:layout_constraintVertical_bias="0.066"/>
+
+
+            <ImageButton
+                android:id="@+id/privacy_policy_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_keyboard_double_arrow_right"
+                android:paddingTop="40dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            app:layout_constraintBottom_toBottomOf="@+id/center_rectangle"
+            app:layout_constraintEnd_toEndOf="@+id/center_rectangle"
+            app:layout_constraintHorizontal_bias="0.48"
+            app:layout_constraintStart_toStartOf="@+id/center_rectangle"
+            app:layout_constraintTop_toBottomOf="@+id/cover_rectangle_top"
+            app:layout_constraintVertical_bias="0.066">
+
+            <TextView
+                android:id="@+id/tv_terms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.5"
+                android:paddingLeft="50dp"
+                android:paddingTop="10dp"
+                android:text="Terms and conditions"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/center_rectangle"
+                app:layout_constraintEnd_toEndOf="@+id/center_rectangle"
+                app:layout_constraintHorizontal_bias="0.48"
+                app:layout_constraintStart_toStartOf="@+id/center_rectangle"
+                app:layout_constraintTop_toBottomOf="@+id/cover_rectangle_top"
+                app:layout_constraintVertical_bias="0.066"/>
+
+
+            <ImageButton
+                android:id="@+id/term_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_keyboard_double_arrow_right"
+                android:paddingTop="40dp" />
+
+        </LinearLayout>
 
     </LinearLayout>
+
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

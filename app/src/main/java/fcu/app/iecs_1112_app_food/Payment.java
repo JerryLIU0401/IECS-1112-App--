@@ -1,0 +1,63 @@
+package fcu.app.iecs_1112_app_food;
+
+import android.annotation.SuppressLint;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+
+public class Payment extends AppCompatActivity {
+    private ImageButton ibRet;
+    private ImageButton ibAddr;
+    private ImageButton ibCardNum;
+    private ImageView imaCard;
+    private TextView tvAddr;
+    private TextView tv300;
+    private Button btnOrder;
+
+    @SuppressLint("MissingInflatedId")
+    @Override
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_payment);
+
+        ibRet = findViewById(R.id.ib_return);
+        ibAddr = findViewById(R.id.ib_addr_ra);
+        ibCardNum = findViewById(R.id.ib_card_ra);
+        imaCard = findViewById(R.id.ima_card);
+        tvAddr = findViewById(R.id.tv_addr);
+        tv300 = findViewById(R.id.tv_300);
+        btnOrder = findViewById(R.id.btn_order);
+
+        ibRet.setOnClickListener(ibListener);
+        ibAddr.setOnClickListener(ibListener);
+        ibCardNum.setOnClickListener(ibListener);
+        btnOrder.setOnClickListener(btnListener);
+    }
+
+    private View.OnClickListener ibListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            switch(v.getId()) {
+                case R.id.ib_return:
+                    break;
+                case R.id.ib_addr_ra:
+                    break;
+                case R.id.ib_card_ra:
+                    break;
+            }
+        }
+    };
+
+    private View.OnClickListener btnListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+
+        }
+    };
+}

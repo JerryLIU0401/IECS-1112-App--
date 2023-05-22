@@ -2,7 +2,6 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/tv_checkout"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:background="@color/grey"
@@ -101,14 +100,16 @@
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_marginStart="32dp"
+                    android:layout_marginTop="60dp"
                     app:layout_constraintBottom_toBottomOf="@+id/tv_add"
-                    app:layout_constraintEnd_toStartOf="@+id/tv_add"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_addr"
                     app:layout_constraintHorizontal_bias="0.244"
                     app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@drawable/search" />
 
                 <TextView
-                    android:id="@+id/tv_add"
+                    android:id="@+id/tv_addr"
                     android:layout_width="156dp"
                     android:layout_height="27dp"
                     android:layout_marginTop="64dp"
@@ -120,14 +121,16 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <ImageButton
-                    android:id="@+id/ib_ra1"
+                    android:id="@+id/ib_addr_ra"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
+                    android:layout_marginTop="71dp"
                     android:layout_marginEnd="32dp"
                     android:background="@color/white"
                     android:scaleType="centerCrop"
-                    app:layout_constraintBottom_toBottomOf="@+id/tv_add"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_addr"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@drawable/right_arrow" />
 
                 <TextView
@@ -140,7 +143,7 @@
                     android:textColor="@color/black"
                     android:textSize="26sp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_add" />
+                    app:layout_constraintTop_toBottomOf="@+id/tv_addr" />
 
                 <ImageView
                     android:id="@+id/ima_card"
@@ -153,28 +156,29 @@
                     tools:srcCompat="@drawable/jcb" />
 
                 <TextView
-                    android:id="@+id/tv_cardnum"
+                    android:id="@+id/tv_card_num"
                     android:layout_width="107dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginBottom="156dp"
                     android:text=".... 0115"
                     android:textColor="@color/black"
                     android:textSize="26sp"
-                    app:layout_constraintEnd_toEndOf="@+id/button"
-                    app:layout_constraintStart_toEndOf="@+id/ima_card"
-                    tools:layout_editor_absoluteY="451dp" />
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/btn_order"
+                    app:layout_constraintStart_toEndOf="@+id/ima_card" />
 
                 <ImageButton
-                    android:id="@+id/ib_ra2"
+                    android:id="@+id/ib_card_ra"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:layout_marginTop="15dp"
                     android:layout_marginEnd="32dp"
-                    android:layout_marginBottom="36dp"
+                    android:layout_marginBottom="163dp"
                     android:background="@color/white"
                     android:scaleType="centerCrop"
-                    app:layout_constraintBottom_toTopOf="@+id/tv_300"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/tv_cardnum"
+                    app:layout_constraintTop_toTopOf="@+id/tv_card_num"
                     app:srcCompat="@drawable/right_arrow" />
 
                 <TextView
@@ -185,7 +189,7 @@
                     android:layout_marginBottom="20dp"
                     android:text="Total"
                     android:textSize="32dp"
-                    app:layout_constraintBottom_toTopOf="@+id/button"
+                    app:layout_constraintBottom_toTopOf="@+id/btn_order"
                     app:layout_constraintStart_toStartOf="parent" />
 
                 <TextView
@@ -198,11 +202,11 @@
                     android:textColorHighlight="@color/black"
                     android:textColorHint="@color/black"
                     android:textSize="32dp"
-                    app:layout_constraintBottom_toTopOf="@+id/button"
+                    app:layout_constraintBottom_toTopOf="@+id/btn_order"
                     app:layout_constraintEnd_toEndOf="parent" />
 
                 <Button
-                    android:id="@+id/button"
+                    android:id="@+id/btn_order"
                     android:layout_width="158dp"
                     android:layout_height="48dp"
                     android:layout_marginBottom="20dp"

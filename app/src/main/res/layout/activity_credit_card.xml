@@ -111,6 +111,16 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@android:drawable/btn_dialog" />
 
+                <ImageView
+                    android:id="@+id/ima_card_icon1"
+                    android:layout_width="50dp"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="13dp"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintStart_toStartOf="@+id/btn_card0501"
+                    app:layout_constraintTop_toTopOf="@+id/btn_card0501"
+                    app:srcCompat="@drawable/jcb" />
+
                 <TextView
                     android:id="@+id/tv_payment_method"
                     android:layout_width="wrap_content"
@@ -122,14 +132,6 @@
                     android:textSize="26sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/ib_close" />
-
-                <ImageView
-                    android:id="@+id/ima_card_icon1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@android:drawable/btn_star_big_on"
-                    tools:layout_editor_absoluteX="40dp"
-                    tools:layout_editor_absoluteY="176dp" />
 
                 <TextView
                     android:id="@+id/tv_card0501"
@@ -155,11 +157,13 @@
 
                 <ImageView
                     android:id="@+id/ima_card_icon2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@android:drawable/btn_star_big_on"
-                    tools:layout_editor_absoluteX="40dp"
-                    tools:layout_editor_absoluteY="271dp" />
+                    android:layout_width="50dp"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="13dp"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintStart_toStartOf="@+id/btn_card9437"
+                    app:layout_constraintTop_toTopOf="@+id/btn_card9437"
+                    app:srcCompat="@drawable/visa__1_" />
 
                 <TextView
                     android:id="@+id/tv_card9437"
@@ -186,11 +190,13 @@
 
                 <ImageView
                     android:id="@+id/ima_card_icon3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@android:drawable/btn_star_big_on"
-                    tools:layout_editor_absoluteX="40dp"
-                    tools:layout_editor_absoluteY="352dp" />
+                    android:layout_width="50dp"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="13dp"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintStart_toStartOf="@+id/btn_card2048"
+                    app:layout_constraintTop_toTopOf="@+id/btn_card2048"
+                    app:srcCompat="@drawable/paypal__2_" />
 
                 <TextView
                     android:id="@+id/tv_card2048"

@@ -111,11 +111,14 @@
 
                 <ImageView
                     android:id="@+id/ima_addr_icon1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@android:drawable/btn_star_big_on"
-                    tools:layout_editor_absoluteX="34dp"
-                    tools:layout_editor_absoluteY="82dp" />
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="38dp"
+                    android:layout_marginTop="20dp"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ib_close"
+                    app:srcCompat="@drawable/search" />
 
                 <EditText
                     android:id="@+id/et_addr_input"
@@ -144,11 +147,14 @@
 
                 <ImageView
                     android:id="@+id/ima_addr_icon2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@android:drawable/btn_star_big_on"
-                    tools:layout_editor_absoluteX="33dp"
-                    tools:layout_editor_absoluteY="238dp" />
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginTop="15dp"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintStart_toStartOf="@+id/btn_add1"
+                    app:layout_constraintTop_toTopOf="@+id/btn_add1"
+                    app:srcCompat="@drawable/placeholder" />
 
                 <TextView
                     android:id="@+id/tv_add1"
@@ -188,11 +194,14 @@
 
                 <ImageView
                     android:id="@+id/ima_addr_icon4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@android:drawable/btn_star_big_on"
-                    tools:layout_editor_absoluteX="34dp"
-                    tools:layout_editor_absoluteY="405dp" />
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginTop="15dp"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintStart_toStartOf="@+id/btn_add2"
+                    app:layout_constraintTop_toTopOf="@+id/btn_add2"
+                    app:srcCompat="@drawable/placeholder__1_" />
 
                 <TextView
                     android:id="@+id/tv_add2"
@@ -209,8 +218,8 @@
 
                 <Button
                     android:id="@+id/btn_add2"
-                    android:layout_width="301dp"
-                    android:layout_height="76dp"
+                    android:layout_width="300dp"
+                    android:layout_height="70dp"
                     android:layout_marginTop="30dp"
                     android:visibility="invisible"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -219,11 +228,14 @@
 
                 <ImageView
                     android:id="@+id/ima_add_icon4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@android:drawable/btn_star_big_on"
-                    tools:layout_editor_absoluteX="34dp"
-                    tools:layout_editor_absoluteY="499dp" />
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginTop="15dp"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintStart_toStartOf="@+id/btn_card2048"
+                    app:layout_constraintTop_toTopOf="@+id/btn_card2048"
+                    app:srcCompat="@drawable/placeholder__1_" />
 
                 <TextView
                     android:id="@+id/tv_add3"

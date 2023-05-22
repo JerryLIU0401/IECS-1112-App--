@@ -57,6 +57,7 @@ public class Payment extends AppCompatActivity {
     private View.OnClickListener btnListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
+
         }
     };
 }

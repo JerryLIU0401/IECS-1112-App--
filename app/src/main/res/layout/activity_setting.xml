@@ -326,6 +326,49 @@
                 android:paddingTop="40dp"
                 tools:ignore="DuplicateIds" />
 
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            app:layout_constraintBottom_toBottomOf="@+id/center_rectangle"
+            app:layout_constraintEnd_toEndOf="@+id/center_rectangle"
+            app:layout_constraintHorizontal_bias="0.48"
+            app:layout_constraintStart_toStartOf="@+id/center_rectangle"
+            app:layout_constraintTop_toBottomOf="@+id/cover_rectangle_top"
+            app:layout_constraintVertical_bias="0.066">
+
+            <TextView
+                android:id="@+id/tv_payment_manager"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.5"
+                android:paddingLeft="50dp"
+                android:paddingTop="10dp"
+                android:text="Payment manager"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/center_rectangle"
+                app:layout_constraintEnd_toEndOf="@+id/center_rectangle"
+                app:layout_constraintHorizontal_bias="0.48"
+                app:layout_constraintStart_toStartOf="@+id/center_rectangle"
+                app:layout_constraintTop_toBottomOf="@+id/cover_rectangle_top"
+                app:layout_constraintVertical_bias="0.066"/>
+
+
+            <ImageButton
+                android:id="@+id/payment_method_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_keyboard_double_arrow_right"
+                android:paddingTop="40dp"
+                tools:ignore="DuplicateIds" />
+
+
         </LinearLayout>
 
         <LinearLayout

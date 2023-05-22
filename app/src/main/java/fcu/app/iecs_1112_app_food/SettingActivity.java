@@ -24,6 +24,11 @@ public class SettingActivity extends PageBarButton {
     private TextView tvChangePass = findViewById(R.id.tv_change_password);
     @SuppressLint("WrongViewCast")
     private TextView tvPaymentMethod = findViewById(R.id.tv_payment_method);
+    private TextView tvPaymentManager = findViewById(R.id.tv_payment_manager);
+    @SuppressLint("WrongViewCast")
+    private Button btnPaymentManager = findViewById(R.id.payment_method_btn);
+
+
 
 
 
@@ -59,12 +64,22 @@ public class SettingActivity extends PageBarButton {
             }
         };
 
+        View.OnClickListener onClickPaymentManagerListener = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(SettingActivity.this, PaymentManagerActivity.class);
+                startActivity(intent);
+            }
+        };
+
         btnEditProfile.setOnClickListener(onClickEditProfileListener);
         tvEditProfile.setOnClickListener(onClickEditProfileListener);
         btnChangePass.setOnClickListener(onClickChangePasswordListener);
         tvChangePass.setOnClickListener(onClickChangePasswordListener);
         btnPaymentMethod.setOnClickListener(onClickAddPaymentListener);
         tvPaymentMethod.setOnClickListener(onClickAddPaymentListener);
+        tvPaymentManager.setOnClickListener(onClickPaymentManagerListener);
+        btnPaymentManager.setOnClickListener(onClickPaymentManagerListener);
 
 
 

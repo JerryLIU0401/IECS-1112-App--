@@ -2,9 +2,11 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tv_my_order"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SettingActivity">
+    android:background="@color/grey"
+    tools:context=".MyOrderActivity">
 
     <View
         android:id="@+id/rectangles_top"
@@ -28,6 +30,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/rectangles_top" />
 
+
     <View
         android:id="@+id/center_rectangle"
         android:layout_width="0dp"
@@ -37,7 +40,7 @@
         android:background="@drawable/backgroud_center_rectangle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cover_rectangle_top"
         app:layout_constraintVertical_bias="1.0" />
@@ -55,7 +58,7 @@
 
 
     <LinearLayout
-        android:id="@+id/linearLayout4"
+        android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginStart="16dp"
@@ -78,7 +81,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="10"
-            android:text="Add payment"
+            android:text="Payment manager"
             android:textAlignment="center"
             android:textSize="24sp"
             android:textStyle="bold" />
@@ -110,7 +113,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@drawable/ic_my_order"
+            android:background="@drawable/ic_my_order_active"
             android:padding="30dp" />
 
         <ImageButton
@@ -127,126 +130,54 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@drawable/ic_settings_active"
+            android:background="@drawable/ic_setting"
             android:padding="30dp" />
 
 
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout6"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:layout_marginTop="24dp"
+        android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="@+id/center_rectangle"
         app:layout_constraintStart_toStartOf="@+id/center_rectangle"
         app:layout_constraintTop_toBottomOf="@+id/cover_rectangle_top">
 
-        <ImageView
-            android:id="@+id/imageView7"
-            android:layout_width="wrap_content"
-            android:layout_height="143dp"
-            android:layout_weight="1"
-            android:padding="10dp"
-            app:srcCompat="@drawable/jcb" />
-
-        <ImageView
-            android:id="@+id/imageView8"
-            android:layout_width="wrap_content"
-            android:layout_height="144dp"
-            android:layout_weight="1"
-            android:padding="10dp"
-            app:srcCompat="@drawable/paypal__2_" />
-
-        <ImageView
-            android:id="@+id/imageView9"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:padding="10dp"
-            app:srcCompat="@drawable/visa__1_" />
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="@+id/center_rectangle"
-        app:layout_constraintStart_toStartOf="@+id/center_rectangle"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout6">
-
-        <EditText
-            android:id="@+id/et_card_type"
-            android:layout_width="300dp"
-            android:layout_height="40dp"
-            android:layout_gravity="center"
-            android:background="@drawable/textview_arc_field"
-            android:ems="10"
-            android:layout_margin="20dp"
-            android:hint="card type"
-            android:inputType="textPersonName"
-            android:paddingLeft="15dp" />
-
-
-        <EditText
-            android:id="@+id/et_card_valid"
-            android:layout_width="300dp"
-            android:layout_height="40dp"
-            android:layout_gravity="center"
-            android:background="@drawable/textview_arc_field"
-            android:ems="10"
-            android:layout_margin="20dp"
-            android:hint="valid thru"
-            android:inputType="textPersonName"
-            android:paddingLeft="15dp" />
-
-        <EditText
-            android:id="@+id/et_card_name"
-            android:layout_width="300dp"
-            android:layout_height="40dp"
-            android:layout_gravity="center"
-            android:background="@drawable/textview_arc_field"
-            android:ems="10"
-            android:layout_margin="20dp"
-            android:hint="crad name"
-            android:inputType="textPersonName"
-            android:paddingLeft="15dp" />
-
-
-        <EditText
-            android:id="@+id/et_card_number"
-            android:layout_width="300dp"
-            android:layout_height="40dp"
-            android:layout_gravity="center"
-            android:background="@drawable/textview_arc_field"
-            android:ems="10"
-            android:layout_margin="20dp"
-            android:hint="card number"
-            android:inputType="textPersonName"
-            android:paddingLeft="15dp" />
-
-        <EditText
-            android:id="@+id/et_card_cvv_number"
-            android:layout_width="300dp"
-            android:layout_height="40dp"
-            android:layout_gravity="center"
-            android:background="@drawable/textview_arc_field"
-            android:ems="10"
-            android:layout_margin="20dp"
-            android:hint="cvv number"
-            android:inputType="textPersonName"
-            android:paddingLeft="15dp" />
-
-        <Button
-            android:id="@+id/btn_add_payment"
-            android:layout_width="wrap_content"
+        <TextView
+            android:id="@+id/tv_your_card"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="20dp"
-            android:backgroundTint="@color/green"
-            android:text="add" />
+            android:textSize="20dp"
+            android:padding="20dp"
+            android:text="Your card" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_your_name_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:textColor="@color/black"
+                android:layout_weight="1"
+                android:textSize="20dp"
+                android:text="fengchia" />
+
+
+            <TextView
+                android:id="@+id/tv_your_card_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:text="******123" />
+        </LinearLayout>
     </LinearLayout>
 
 

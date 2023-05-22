@@ -11,7 +11,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class CreditCard extends AppCompatActivity {
     private ImageButton ibRet;
-    private ImageButton ibClose;
     private ImageButton ibPlus;
     private Button btnCard0501;
     private Button btnCard9437;
@@ -24,14 +23,12 @@ public class CreditCard extends AppCompatActivity {
         setContentView(R.layout.activity_address);
 
         ibRet = findViewById(R.id.ib_return);
-        ibClose = findViewById(R.id.ib_close);
         ibPlus = findViewById(R.id.ib_plus_method);
         btnCard0501 = findViewById(R.id.btn_card0501);
         btnCard9437 = findViewById(R.id.btn_card9437);
         btnCard2048 = findViewById(R.id.btn_card2048);
 
         ibRet.setOnClickListener(ibListener);
-        ibClose.setOnClickListener(ibListener);
         ibPlus.setOnClickListener(ibListener);
         btnCard0501.setOnClickListener(btnListener);
         btnCard9437.setOnClickListener(btnListener);
@@ -43,8 +40,6 @@ public class CreditCard extends AppCompatActivity {
         public void onClick(View v) {
             switch(v.getId()) {
                 case R.id.ib_return:
-                    break;
-                case R.id.ib_close:
                     break;
                 case R.id.ib_plus_method:
                     break;

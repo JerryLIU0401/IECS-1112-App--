@@ -51,13 +51,13 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/tv_checkout"
-            android:layout_width="129dp"
+            android:id="@+id/tv_credit_card"
+            android:layout_width="wrap_content"
             android:layout_height="40dp"
             android:layout_marginStart="141dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="141dp"
-            android:text="Checkout"
+            android:text="Credit Card"
             android:textSize="30sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -95,22 +95,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="638dp">
 
-                <ImageButton
-                    android:id="@+id/ib_close"
-                    android:layout_width="42dp"
-                    android:layout_height="42dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginEnd="307dp"
-                    android:background="@color/white"
-                    android:paddingLeft="10dp"
-                    android:paddingTop="10dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@android:drawable/btn_dialog" />
-
                 <ImageView
                     android:id="@+id/ima_card_icon1"
                     android:layout_width="50dp"
@@ -126,12 +110,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="32dp"
-                    android:layout_marginTop="24dp"
                     android:text="Payment Method"
                     android:textColor="@color/black"
                     android:textSize="26sp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/ib_close" />
+                    tools:layout_editor_absoluteY="82dp" />
 
                 <TextView
                     android:id="@+id/tv_card0501"

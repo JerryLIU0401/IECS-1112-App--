@@ -13,7 +13,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Address extends AppCompatActivity {
     private ImageButton ibRet;
-    private ImageButton ibClose;
     private Button btnAddCurrent;
     private Button btnAddRecent1;
     private Button btnAddRecent2;
@@ -29,7 +28,6 @@ public class Address extends AppCompatActivity {
         setContentView(R.layout.activity_address);
 
         ibRet = findViewById(R.id.ib_return);
-        ibClose = findViewById(R.id.ib_close);
         btnAddCurrent = findViewById(R.id.btn_add1);
         btnAddRecent1 = findViewById(R.id.btn_add2);
         btnAddRecent2 = findViewById(R.id.btn_card2048);
@@ -39,7 +37,6 @@ public class Address extends AppCompatActivity {
         etInput = findViewById(R.id.et_addr_input);
 
         ibRet.setOnClickListener(ibListener);
-        ibClose.setOnClickListener(ibListener);
         btnAddCurrent.setOnClickListener(btnListener);
         btnAddRecent1.setOnClickListener(btnListener);
         btnAddRecent2.setOnClickListener(btnListener);
@@ -48,12 +45,6 @@ public class Address extends AppCompatActivity {
     private View.OnClickListener ibListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            switch(v.getId()) {
-                case R.id.ib_return:
-                    break;
-                case R.id.ib_close:
-                    break;
-            }
         }
     };
 

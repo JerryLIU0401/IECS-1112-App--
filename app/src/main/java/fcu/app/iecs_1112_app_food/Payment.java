@@ -1,6 +1,7 @@
 package fcu.app.iecs_1112_app_food;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -45,10 +46,17 @@ public class Payment extends AppCompatActivity {
         public void onClick(View v) {
             switch(v.getId()) {
                 case R.id.ib_return:
+                    finish();
                     break;
                 case R.id.ib_addr_ra:
+                    Intent intent = new Intent();
+                    intent.setClass(Payment.this, Address.class);
+                    startActivity(intent);
                     break;
                 case R.id.ib_card_ra:
+                    Intent intent2 = new Intent();
+                    intent2.setClass(Payment.this, CreditCard.class);
+                    startActivity(intent2);
                     break;
             }
         }

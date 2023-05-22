@@ -1,6 +1,7 @@
 package fcu.app.iecs_1112_app_food;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -40,23 +41,44 @@ public class Address extends AppCompatActivity {
         btnAddCurrent.setOnClickListener(btnListener);
         btnAddRecent1.setOnClickListener(btnListener);
         btnAddRecent2.setOnClickListener(btnListener);
+
+        if(etInput.getText().toString() != "") {
+            tvAddRec2.setText(tvAddRec1.getText().toString());
+            tvAddRec1.setText(tvAddCurr.getText().toString());
+            tvAddCurr.setText(etInput.getText().toString());
+        }
     }
 
     private View.OnClickListener ibListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
+            //Intent intent = new Intent();
+            //intent.setClass(Address.this, Payment.class);
+            //startActivity(intent);
+            finish();
         }
     };
 
     private View.OnClickListener btnListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
+            String addrNew;
+            String addrLast;
             switch(v.getId()) {
                 case R.id.btn_add1:
                     break;
                 case R.id.btn_add2:
+                    addrNew = tvAddRec1.getText().toString();
+                    addrLast = tvAddCurr.getText().toString();
+                    tvAddCurr.setText(addrNew);
+                    tvAddRec1.setText(addrLast);
                     break;
-                case R.id.btn_card2048:
+                case R.id.btn_add3:
+                    addrNew = tvAddRec2.getText().toString();
+                    addrLast = tvAddCurr.getText().toString();
+                    tvAddCurr.setText(addrNew);
+                    tvAddRec2.setText(tvAddRec1.getText().toString());
+                    tvAddRec1.setText(addrLast);
                     break;
             }
         }

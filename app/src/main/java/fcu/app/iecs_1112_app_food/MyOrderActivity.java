@@ -11,18 +11,17 @@ import android.widget.ListView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MyOrderActivity extends AppCompatActivity {
-
-    private ImageButton imgBtnSettings;
+public class MyOrderActivity extends PageBarButton {
 
     private ListView lvFoods;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setLayoutId(R.layout.activity_my_order);
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_my_order);
-
-        imgBtnSettings = findViewById(R.id.img_btn_settings);
+        //setContentView(R.layout.activity_my_order);
+        getSupportActionBar().hide();
+        setPageBarBtnClickListener(MyOrderActivity.this);
         View.OnClickListener onClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -43,6 +42,5 @@ public class MyOrderActivity extends AppCompatActivity {
 
             }
         };
-        imgBtnSettings.setOnClickListener(onClickListener);
     }
 }

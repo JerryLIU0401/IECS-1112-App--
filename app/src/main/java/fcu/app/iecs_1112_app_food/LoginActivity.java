@@ -15,6 +15,8 @@ public class LoginActivity extends AppCompatActivity {
     private AccountDatabaseHandler databaseHandler;
     private EditText et_account;
     private EditText et_password;
+    //account 123
+    //password 123
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +41,7 @@ public class LoginActivity extends AppCompatActivity {
                     Intent intent = new Intent(LoginActivity.this, MainPageActivity.class);
                     startActivity(intent);
                     finish();
-                }else{
+                } else {
                     Toast.makeText(LoginActivity.this, "Wrong account or password", Toast.LENGTH_LONG).show();
                 }
             }

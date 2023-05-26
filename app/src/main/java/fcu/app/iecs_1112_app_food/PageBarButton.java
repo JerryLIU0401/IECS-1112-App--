@@ -4,7 +4,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 
 import androidx.annotation.Nullable;
@@ -15,6 +14,7 @@ public class PageBarButton extends AppCompatActivity {
     private ImageButton settingBtn;
     private ImageButton myOrderBtn;
     private ImageButton phoneBtn;
+    private Intent homeIntent;
     private int layoutId;
 
     @Override
@@ -28,7 +28,7 @@ public class PageBarButton extends AppCompatActivity {
     }
 
 
-    public void setAllBtnClickListener(Context context) {
+    public void setPageBarBtnClickListener(Context context) {
         View.OnClickListener onSettingBtnClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -70,20 +70,6 @@ public class PageBarButton extends AppCompatActivity {
         settingBtn.setOnClickListener(onSettingBtnClickListener);
         phoneBtn.setOnClickListener(onPhoneBtnClickListener);
         myOrderBtn.setOnClickListener(onMyOrderBtnClickListener);
-
-//        if (context.getClass() == SettingActivity.class) {
-//            homeBtn.setOnClickListener(onHomeBtnClickListener);
-//            myOrderBtn.setOnClickListener(onMyOrderBtnClickListener);
-//        } else if (context.getClass() == MainPageActivity.class) {
-//            myOrderBtn.setOnClickListener(onMyOrderBtnClickListener);
-//            settingBtn.setOnClickListener(onSettingBtnClickListener);
-//        } else if (context.getClass() == MyOrderActivity.class) {
-//            homeBtn.setOnClickListener(onHomeBtnClickListener);
-//            settingBtn.setOnClickListener(onSettingBtnClickListener);
-//        }
-//       else if(context.getClass() == PhoneActivity.class){
-//            phoneBtn.setOnClickListener(onPhoneBtnClickListener);
-//        }
 
     }
 

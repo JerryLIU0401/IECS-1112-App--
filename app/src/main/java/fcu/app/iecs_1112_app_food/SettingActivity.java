@@ -1,35 +1,23 @@
 package fcu.app.iecs_1112_app_food;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 public class SettingActivity extends PageBarButton {
 
 
-    @SuppressLint("WrongViewCast")
-    private Button btnEditProfile = findViewById(R.id.edit_profile_btn);
-    @SuppressLint("WrongViewCast")
-    private Button btnChangePass = findViewById(R.id.change_password_btn);
-    @SuppressLint("WrongViewCast")
-    private Button btnPaymentMethod = findViewById(R.id.payment_method_btn);
-    @SuppressLint("WrongViewCast")
-    private TextView tvEditProfile = findViewById(R.id.tv_edit_profile);
-    @SuppressLint("WrongViewCast")
-    private TextView tvChangePass = findViewById(R.id.tv_change_password);
-    @SuppressLint("WrongViewCast")
-    private TextView tvPaymentMethod = findViewById(R.id.tv_payment_method);
-    private TextView tvPaymentManager = findViewById(R.id.tv_payment_manager);
-    @SuppressLint("WrongViewCast")
-    private Button btnPaymentManager = findViewById(R.id.payment_method_btn);
-
-
-
+    private ImageButton btnEditProfile;
+    private ImageButton btnChangePass;
+    private ImageButton btnPaymentMethod;
+    private TextView tvEditProfile;
+    private TextView tvChangePass;
+    private TextView tvPaymentMethod;
+    private TextView tvPaymentManager;
+    private ImageButton btnPaymentManager;
 
 
     @Override
@@ -38,7 +26,9 @@ public class SettingActivity extends PageBarButton {
         super.onCreate(savedInstanceState);
         //setContentView(R.layout.activity_setting);
         getSupportActionBar().hide();
-        setAllBtnClickListener(SettingActivity.this);
+        setPageBarBtnClickListener(SettingActivity.this);
+        setValuebyId();
+
 
         View.OnClickListener onClickEditProfileListener = new View.OnClickListener() {
             @Override
@@ -82,6 +72,16 @@ public class SettingActivity extends PageBarButton {
         btnPaymentManager.setOnClickListener(onClickPaymentManagerListener);
 
 
+    }
 
+    public void setValuebyId() {
+        btnEditProfile = findViewById(R.id.edit_profile_btn);
+        btnChangePass = findViewById(R.id.change_password_btn);
+        btnPaymentMethod = findViewById(R.id.payment_method_btn);
+        tvEditProfile = findViewById(R.id.tv_edit_profile);
+        tvChangePass = findViewById(R.id.tv_change_password);
+        tvPaymentMethod = findViewById(R.id.tv_payment_method);
+        tvPaymentManager = findViewById(R.id.tv_payment_manager);
+        btnPaymentManager = findViewById(R.id.payment_method_btn);
     }
 }

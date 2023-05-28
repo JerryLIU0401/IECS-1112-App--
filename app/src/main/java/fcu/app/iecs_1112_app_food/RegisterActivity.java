@@ -33,14 +33,18 @@ public class RegisterActivity extends AppCompatActivity {
         View.OnClickListener onRegisterBtnClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(!(et_password.getText().toString().equals(et_password_confirm.getText().toString()))){
-                    Toast.makeText(RegisterActivity.this,"Wrong password confirm",Toast.LENGTH_LONG);
-                } else if (et_account.getText().toString().isEmpty()){
+                if (!(et_password.getText().toString().equals(et_password_confirm.getText().toString()))) {
+                    Toast.makeText(RegisterActivity.this, "Wrong password confirm", Toast.LENGTH_LONG);
+                } else if (et_account.getText().toString().isEmpty()) {
                     Toast.makeText(RegisterActivity.this, "Account is empty !!", Toast.LENGTH_LONG).show();
                 } else if (et_password.getText().toString().isEmpty()) {
                     Toast.makeText(RegisterActivity.this, "Password is empty !!", Toast.LENGTH_LONG).show();
-                } else if (et_password_confirm.getText().toString().isEmpty()){
+                } else if (et_password_confirm.getText().toString().isEmpty()) {
                     Toast.makeText(RegisterActivity.this, "Password confirm is empty !!", Toast.LENGTH_LONG).show();
+                } else if (databaseHandler.isAccountExist(et_account.getText().toString())) {
+                    Toast.makeText(RegisterActivity.this, "Account name had been used", Toast.LENGTH_LONG).show();
+                } else if (databaseHandler.isMailExist(et_mail.getText().toString())) {
+                    Toast.makeText(RegisterActivity.this, "Mail had been used", Toast.LENGTH_LONG).show();
                 } else {
                     userIcon = "demoIcon";
                     databaseHandler.addAccount(et_account.getText().toString(), et_mail.getText().toString(), et_password.getText().toString(), userIcon);
@@ -51,5 +55,6 @@ public class RegisterActivity extends AppCompatActivity {
 
         register_btn.setOnClickListener(onRegisterBtnClickListener);
     }
-    
+
+
 }

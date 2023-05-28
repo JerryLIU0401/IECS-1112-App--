@@ -4,11 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class AddPaymentActivity extends AppCompatActivity {
+public class AddPaymentActivity extends PageBarButton {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setLayoutId(R.layout.activity_add_payment);
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_payment);
+        //setContentView(R.layout.activity_add_payment);
+        setPageBarBtnClickListener(AddPaymentActivity.this);
+        getSupportActionBar().hide();
     }
 }

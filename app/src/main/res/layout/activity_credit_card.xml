@@ -114,7 +114,8 @@
                     android:textColor="@color/black"
                     android:textSize="26sp"
                     app:layout_constraintStart_toStartOf="parent"
-                    tools:layout_editor_absoluteY="82dp" />
+                    tools:layout_editor_absoluteY="82dp"
+                    tools:ignore="MissingConstraints" />
 
                 <TextView
                     android:id="@+id/tv_card0501"

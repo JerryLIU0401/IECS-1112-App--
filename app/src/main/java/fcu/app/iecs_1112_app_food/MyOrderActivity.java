@@ -49,6 +49,14 @@ public class MyOrderActivity extends PageBarButton {
                 startActivity(intent);
             }
         };
+        View.OnClickListener onClickCancelPayListener = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MyOrderActivity.this, MainActivity.class);
+                startActivity(intent);
+            }
+        };
         btnPay.setOnClickListener(onClickPayListener);
+        btnCancel.setOnClickListener(onClickCancelPayListener);
     }
 }

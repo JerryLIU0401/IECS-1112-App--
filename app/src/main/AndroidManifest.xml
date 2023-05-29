@@ -12,6 +12,21 @@
         android:theme="@style/Theme.IECS1112AppFood"
         tools:targetApi="31">
         <activity
+            android:name=".PaymentManagerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ForgotPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AddPaymentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EditPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EditProfileActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainPageActivity"
             android:exported="false" />
         <activity

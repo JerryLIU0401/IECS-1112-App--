@@ -1,12 +1,21 @@
 package fcu.app.iecs_1112_app_food;
 
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
+
+import java.io.IOException;
 
 public class RegisterActivity extends AppCompatActivity {
     private Button register_btn;
@@ -15,7 +24,10 @@ public class RegisterActivity extends AppCompatActivity {
     private EditText et_password_confirm;
     private EditText et_mail;
     private String userIcon;
+    private ImageButton userIcon_btn;
     private AccountDatabaseHandler databaseHandler;
+    private ActivityResultLauncher<String> imgPickerLauncher;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +39,7 @@ public class RegisterActivity extends AppCompatActivity {
         et_password = findViewById(R.id.et_password_registerpage);
         et_password_confirm = findViewById(R.id.et_password_confirm_registerpage);
         et_mail = findViewById(R.id.et_mail_registerpage);
+        userIcon_btn = findViewById(R.id.register_usericon);
         databaseHandler = new AccountDatabaseHandler(this);
         databaseHandler.open();
 
@@ -53,7 +66,40 @@ public class RegisterActivity extends AppCompatActivity {
             }
         };
 
+        View.OnClickListener onUserIconBtnClickListener = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openGallery();
+            }
+        };
+
+        imgPickerLauncher = registerForActivityResult(
+                new ActivityResultContracts.GetContent(),
+                new ActivityResultCallback<Uri>() {
+                    @Override
+                    public void onActivityResult(Uri result) {
+                        if (result != null) {
+                            addImageButtonToView(result);
+                        }
+                    }
+                }
+        );
+
+        userIcon_btn.setOnClickListener(onUserIconBtnClickListener);
         register_btn.setOnClickListener(onRegisterBtnClickListener);
+    }
+
+    private void openGallery() {
+        imgPickerLauncher.launch("image/*");
+    }
+
+    private void addImageButtonToView(Uri imageUri) {
+        try {
+            Bitmap bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), imageUri); //將 URI 轉換為 Bitmap 物件
+            userIcon_btn.setImageBitmap(bitmap);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 

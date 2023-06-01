@@ -60,7 +60,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageButton
-            android:id="@+id/img_btn"
+            android:id="@+id/img_btn_return"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -147,7 +147,7 @@
             android:layout_height="144dp"
             android:layout_weight="1"
             android:padding="10dp"
-            app:srcCompat="@drawable/paypal__2_" />
+            app:srcCompat="@drawable/paypal" />
 
         <ImageView
             android:id="@+id/imageView9"
@@ -155,7 +155,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:padding="10dp"
-            app:srcCompat="@drawable/visa__1_" />
+            app:srcCompat="@drawable/visa" />
 
 
     </LinearLayout>

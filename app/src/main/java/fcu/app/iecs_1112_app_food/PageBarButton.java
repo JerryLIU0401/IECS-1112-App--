@@ -1,11 +1,15 @@
 package fcu.app.iecs_1112_app_food;
 
+import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -14,8 +18,8 @@ public class PageBarButton extends AppCompatActivity {
     private ImageButton settingBtn;
     private ImageButton myOrderBtn;
     private ImageButton phoneBtn;
-    private Intent homeIntent;
     private int layoutId;
+    private boolean phoneCallPermission;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -25,8 +29,14 @@ public class PageBarButton extends AppCompatActivity {
         homeBtn = findViewById(R.id.img_btn_home);
         phoneBtn = findViewById(R.id.img_btn_phone);
         myOrderBtn = findViewById(R.id.img_btn_my_order);
+        requestPermissions(new String[]{Manifest.permission.CALL_PHONE}, 100);
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        phoneCallPermission = checkSelfPermission(Manifest.permission.CALL_PHONE) == PackageManager.PERMISSION_GRANTED;
+    }
 
     public void setPageBarBtnClickListener(Context context) {
         View.OnClickListener onSettingBtnClickListener = new View.OnClickListener() {
@@ -52,7 +62,12 @@ public class PageBarButton extends AppCompatActivity {
         View.OnClickListener onPhoneBtnClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Phone call frame
+                System.out.println(phoneCallPermission);
+                if (phoneCallPermission) {
+                    Intent intent = new Intent(Intent.ACTION_DIAL);
+                    intent.setData(Uri.parse("tel:" + "000000000"));
+                    startActivity(intent);
+                }
             }
         };
 
@@ -72,8 +87,12 @@ public class PageBarButton extends AppCompatActivity {
         myOrderBtn.setOnClickListener(onMyOrderBtnClickListener);
 
     }
-
     public void setLayoutId(int n) {
         layoutId = n;
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
     }
 }

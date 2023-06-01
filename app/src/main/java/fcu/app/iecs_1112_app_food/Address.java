@@ -49,7 +49,7 @@ public class Address extends AppCompatActivity {
         }
     }
 
-    private View.OnClickListener ibListener = new View.OnClickListener() {
+    View.OnClickListener ibListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
             //Intent intent = new Intent();
@@ -59,7 +59,7 @@ public class Address extends AppCompatActivity {
         }
     };
 
-    private View.OnClickListener btnListener = new View.OnClickListener() {
+    View.OnClickListener btnListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
             String addrNew;

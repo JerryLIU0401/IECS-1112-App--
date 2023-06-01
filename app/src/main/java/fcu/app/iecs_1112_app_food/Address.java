@@ -14,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Address extends AppCompatActivity {
     private ImageButton ibRet;
+    private ImageButton ibsearch;
     private Button btnAddCurrent;
     private Button btnAddRecent1;
     private Button btnAddRecent2;
@@ -29,6 +30,7 @@ public class Address extends AppCompatActivity {
         setContentView(R.layout.activity_address);
 
         ibRet = findViewById(R.id.ib_return);
+        ibsearch = findViewById(R.id.ib_addr_search);
         btnAddCurrent = findViewById(R.id.btn_add1);
         btnAddRecent1 = findViewById(R.id.btn_add2);
         btnAddRecent2 = findViewById(R.id.btn_card2048);
@@ -38,15 +40,16 @@ public class Address extends AppCompatActivity {
         etInput = findViewById(R.id.et_addr_input);
 
         ibRet.setOnClickListener(ibListener);
+        ibsearch.setOnClickListener(ibListener);
         btnAddCurrent.setOnClickListener(btnListener);
         btnAddRecent1.setOnClickListener(btnListener);
         btnAddRecent2.setOnClickListener(btnListener);
 
-        if(etInput.getText().toString() != "") {
+        /*if(etInput.getText().toString() != "") {
             tvAddRec2.setText(tvAddRec1.getText().toString());
             tvAddRec1.setText(tvAddCurr.getText().toString());
             tvAddCurr.setText(etInput.getText().toString());
-        }
+        }*/
     }
 
     private View.OnClickListener ibListener = new View.OnClickListener() {
@@ -55,11 +58,21 @@ public class Address extends AppCompatActivity {
             //Intent intent = new Intent();
             //intent.setClass(Address.this, Payment.class);
             //startActivity(intent);
-            finish();
+            switch (v.getId()) {
+                case R.id.ib_return:
+                    finish();
+                    break;
+                case R.id.ib_addr_search:
+                    if(etInput.getText().toString() != "") {
+                        tvAddRec2.setText(tvAddRec1.getText().toString());
+                        tvAddRec1.setText(tvAddCurr.getText().toString());
+                        tvAddCurr.setText(etInput.getText().toString());
+                    break;
+            }
         }
     };
 
-    private View.OnClickListener btnListener = new View.OnClickListener() {
+    public View.OnClickListener btnListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
             String addrNew;
@@ -83,5 +96,4 @@ public class Address extends AppCompatActivity {
             }
         }
     };
-
 }

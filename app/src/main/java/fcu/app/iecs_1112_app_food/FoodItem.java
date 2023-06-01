@@ -1,7 +1,6 @@
 package fcu.app.iecs_1112_app_food;
 
 public class FoodItem {
-
     private int imageId;
     private String foodName;
     private int foodPrice;

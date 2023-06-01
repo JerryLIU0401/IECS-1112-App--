@@ -45,16 +45,6 @@
         app:layout_constraintTop_toBottomOf="@+id/cover_rectangle_top"
         app:layout_constraintVertical_bias="1.0" />
 
-    <View
-        android:id="@+id/bottom_menu_bar"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_marginTop="700dp"
-        android:background="@color/white"
-        app:layout_constraintBottom_toBottomOf="@+id/center_rectangle"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/center_rectangle" />
 
 
     <LinearLayout
@@ -90,14 +80,12 @@
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
+        android:layout_height="60dp"
         android:background="@color/white"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/bottom_menu_bar"
-        app:layout_constraintStart_toStartOf="@+id/bottom_menu_bar">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
 
         <ImageButton
@@ -220,27 +208,84 @@
 
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="180dp"
-        android:orientation="vertical"
+    <ListView
+        android:id="@+id/lv_foods"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/total_view"
         app:layout_constraintEnd_toEndOf="@+id/center_rectangle"
         app:layout_constraintStart_toStartOf="@+id/center_rectangle"
-        app:layout_constraintTop_toBottomOf="@+id/cover_rectangle_top">
+        app:layout_constraintTop_toTopOf="@+id/center_rectangle"
+        tools:ignore="MissingConstraints,Suspicious0dp" />
 
 
-        <ListView
-            android:id="@+id/lv_foods"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            app:layout_constraintEnd_toEndOf="@+id/center_rectangle"
-            app:layout_constraintStart_toStartOf="@+id/center_rectangle"
-            app:layout_constraintTop_toBottomOf="@+id/tv_menu"
-            tools:ignore="Suspicious0dp" />
-    </LinearLayout>
+    <View
+        android:id="@+id/total_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="520dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="@+id/center_rectangle"
+        app:layout_constraintStart_toStartOf="@+id/center_rectangle"
+        app:layout_constraintTop_toTopOf="@+id/center_rectangle"
+        tools:ignore="MissingConstraints,Suspicious0dp" />
+
+
+
+
+
+    <Button
+        android:id="@+id/btn_pay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/green"
+        android:text="pay"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="@+id/total_view"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toStartOf="@+id/total_view"
+        app:layout_constraintTop_toTopOf="@+id/total_view"
+        app:layout_constraintVertical_bias="0.68" />
+
+
+    <Button
+        android:id="@+id/btn_cancel_pay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/red"
+        android:text="cancel"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="@+id/total_view"
+        app:layout_constraintHorizontal_bias="0.74"
+        app:layout_constraintStart_toStartOf="@+id/total_view"
+        app:layout_constraintTop_toTopOf="@+id/total_view"
+        app:layout_constraintVertical_bias="0.68" />
+
+
+    <TextView
+        android:id="@+id/tv_total"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginBottom="90dp"
+        android:text="Total: 0 NTD"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="@+id/total_view"
+        app:layout_constraintEnd_toEndOf="@+id/total_view"
+        app:layout_constraintStart_toStartOf="@+id/total_view"
+        app:layout_constraintTop_toBottomOf="@+id/lv_foods" />
+
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

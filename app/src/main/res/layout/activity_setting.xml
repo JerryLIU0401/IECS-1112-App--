@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/grey"
+
     tools:context=".SettingActivity">
 
     <View
@@ -42,16 +44,7 @@
         app:layout_constraintTop_toBottomOf="@+id/cover_rectangle_top"
         app:layout_constraintVertical_bias="0.0" />
 
-    <View
-        android:id="@+id/bottom_menu_bar"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_marginTop="700dp"
-        android:background="@color/white"
-        app:layout_constraintBottom_toBottomOf="@+id/center_rectangle"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/center_rectangle" />
+
 
 
     <LinearLayout
@@ -87,14 +80,12 @@
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
+        android:layout_height="60dp"
         android:background="@color/white"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/bottom_menu_bar"
-        app:layout_constraintStart_toStartOf="@+id/bottom_menu_bar">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
 
         <ImageButton
@@ -129,6 +120,7 @@
             android:layout_weight="1"
             android:background="@drawable/ic_settings_active"
             android:padding="30dp" />
+
 
     </LinearLayout>
 

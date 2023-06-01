@@ -13,6 +13,9 @@ public class SettingActivity extends PageBarButton {
     private ImageButton btnEditProfile;
     private ImageButton btnChangePass;
     private ImageButton btnPaymentMethod;
+    private ImageButton btnAboutUs;
+    private ImageButton btnPrivacyPolicy;
+    private ImageButton btnTerm;
     private TextView tvEditProfile;
     private TextView tvChangePass;
     private TextView tvPaymentMethod;
@@ -49,7 +52,8 @@ public class SettingActivity extends PageBarButton {
         View.OnClickListener onClickAddPaymentListener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(SettingActivity.this, AddPaymentActivity.class);
+                Intent intent = new Intent();
+                intent.setClass(SettingActivity.this, AddPaymentActivity.class);
                 startActivity(intent);
             }
         };
@@ -57,8 +61,32 @@ public class SettingActivity extends PageBarButton {
         View.OnClickListener onClickPaymentManagerListener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(SettingActivity.this, PaymentManagerActivity.class);
+                Intent intent = new Intent();
+                intent.setClass(SettingActivity.this, PaymentManagerActivity.class);
                 startActivity(intent);
+            }
+        };
+
+        View.OnClickListener onClickMoreListener = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                switch (v.getId()) {
+                    case R.id.about_us_btn:
+                        Intent intent = new Intent();
+                        intent.setClass(SettingActivity.this, AboutUsActivity.class);
+                        startActivity(intent);
+                        break;
+                    case R.id.privacy_policy_btn:
+                        Intent intent2 = new Intent();
+                        intent2.setClass(SettingActivity.this, PrivacyPolicyActivity.class);
+                        startActivity(intent2);
+                        break;
+                    case R.id.term_btn:
+                        Intent intent3 = new Intent();
+                        intent3.setClass(SettingActivity.this, TermActivity.class);
+                        startActivity(intent3);
+                        break;
+                }
             }
         };
 
@@ -71,6 +99,10 @@ public class SettingActivity extends PageBarButton {
         tvPaymentManager.setOnClickListener(onClickPaymentManagerListener);
         btnPaymentManager.setOnClickListener(onClickPaymentManagerListener);
 
+        btnAboutUs.setOnClickListener(onClickMoreListener);
+        btnPrivacyPolicy.setOnClickListener(onClickMoreListener);
+        btnTerm.setOnClickListener(onClickMoreListener);
+
 
     }
 
@@ -82,6 +114,10 @@ public class SettingActivity extends PageBarButton {
         tvChangePass = findViewById(R.id.tv_change_password);
         tvPaymentMethod = findViewById(R.id.tv_payment_method);
         tvPaymentManager = findViewById(R.id.tv_payment_manager);
-        btnPaymentManager = findViewById(R.id.payment_method_btn);
+        btnPaymentManager = findViewById(R.id.payment_manager_btn);
+
+        btnAboutUs = findViewById(R.id.about_us_btn);
+        btnPrivacyPolicy = findViewById(R.id.privacy_policy_btn);
+        btnTerm = findViewById(R.id.term_btn);
     }
 }

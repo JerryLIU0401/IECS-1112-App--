@@ -101,7 +101,7 @@
                     android:layout_height="30dp"
                     android:layout_marginStart="32dp"
                     android:layout_marginTop="60dp"
-                    app:layout_constraintBottom_toBottomOf="@+id/tv_add"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_addr"
                     app:layout_constraintEnd_toStartOf="@+id/tv_addr"
                     app:layout_constraintHorizontal_bias="0.244"
                     app:layout_constraintStart_toStartOf="parent"
@@ -151,6 +151,7 @@
                     android:layout_height="50dp"
                     android:layout_marginStart="32dp"
                     android:layout_marginBottom="20dp"
+                    android:visibility="visible"
                     app:layout_constraintBottom_toTopOf="@+id/tv_total"
                     app:layout_constraintStart_toStartOf="parent"
                     tools:srcCompat="@drawable/jcb" />
@@ -193,7 +194,7 @@
                     app:layout_constraintStart_toStartOf="parent" />
 
                 <TextView
-                    android:id="@+id/tv_300"
+                    android:id="@+id/tv_price"
                     android:layout_width="106dp"
                     android:layout_height="43dp"
                     android:layout_marginEnd="64dp"
@@ -210,13 +211,12 @@
                     android:layout_width="158dp"
                     android:layout_height="48dp"
                     android:layout_marginBottom="20dp"
+                    android:backgroundTint="@color/pink"
                     android:text="Make an order"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.497"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:rippleColor="@color/pink"
-                    app:strokeColor="@color/pink" />
+                    app:layout_constraintStart_toStartOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>

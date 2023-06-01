@@ -157,7 +157,7 @@
                     android:scaleType="centerCrop"
                     app:layout_constraintStart_toStartOf="@+id/btn_card9437"
                     app:layout_constraintTop_toTopOf="@+id/btn_card9437"
-                    app:srcCompat="@drawable/visa__1_" />
+                    app:srcCompat="@drawable/visa" />
 
                 <TextView
                     android:id="@+id/tv_card9437"
@@ -201,7 +201,7 @@
                     android:scaleType="centerCrop"
                     app:layout_constraintStart_toStartOf="@+id/btn_card2048"
                     app:layout_constraintTop_toTopOf="@+id/btn_card2048"
-                    app:srcCompat="@drawable/paypal__2_" />
+                    app:srcCompat="@drawable/paypal" />
 
                 <TextView
                     android:id="@+id/tv_card2048"

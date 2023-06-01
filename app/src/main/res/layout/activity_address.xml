@@ -6,6 +6,8 @@
     android:layout_height="match_parent"
     android:background="@color/grey"
     android:scrollbarThumbHorizontal="@color/white"
+    android:screenOrientation="portrait"
+    android:windowSoftInputMode="adjustPan"
     tools:context=".MyOrderActivity">
 
     <View
@@ -95,10 +97,11 @@
 
                 <ImageButton
                     android:id="@+id/ib_addr_search"
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
-                    android:layout_marginStart="38dp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="35dp"
                     android:layout_marginTop="75dp"
+                    android:backgroundTint="@color/white"
                     android:scaleType="centerCrop"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
@@ -106,14 +109,13 @@
 
                 <EditText
                     android:id="@+id/et_addr_input"
-                    android:layout_width="270dp"
-                    android:layout_height="45dp"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
                     android:layout_marginTop="80dp"
+                    android:layout_marginEnd="40dp"
                     android:ems="10"
                     android:inputType="textPersonName"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.52"
-                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
@@ -128,6 +130,16 @@
                     app:layout_constraintHorizontal_bias="0.12"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/et_addr_input" />
+
+                <Button
+                    android:id="@+id/btn_add1"
+                    android:layout_width="300dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="30dp"
+                    android:visibility="invisible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_current" />
 
                 <ImageView
                     android:id="@+id/ima_addr_icon2"
@@ -152,16 +164,6 @@
                     app:layout_constraintBottom_toBottomOf="@+id/btn_add1"
                     app:layout_constraintEnd_toEndOf="@+id/btn_add1" />
 
-                <Button
-                    android:id="@+id/btn_add1"
-                    android:layout_width="300dp"
-                    android:layout_height="70dp"
-                    android:layout_marginTop="30dp"
-                    android:visibility="invisible"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_current" />
-
                 <TextView
                     android:id="@+id/tv_recent"
                     android:layout_width="wrap_content"
@@ -174,6 +176,16 @@
                     app:layout_constraintHorizontal_bias="0.117"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/btn_add1" />
+
+                <Button
+                    android:id="@+id/btn_add2"
+                    android:layout_width="300dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="30dp"
+                    android:visibility="invisible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_recent" />
 
                 <ImageView
                     android:id="@+id/ima_addr_icon4"
@@ -200,14 +212,16 @@
                     app:layout_constraintStart_toStartOf="@+id/btn_add2" />
 
                 <Button
-                    android:id="@+id/btn_add2"
+                    android:id="@+id/btn_add3"
                     android:layout_width="300dp"
                     android:layout_height="70dp"
-                    android:layout_marginTop="30dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="24dp"
                     android:visibility="invisible"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.03"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_recent" />
+                    app:layout_constraintTop_toBottomOf="@+id/btn_add2" />
 
                 <ImageView
                     android:id="@+id/ima_add_icon4"
@@ -231,18 +245,6 @@
                     android:textSize="20sp"
                     app:layout_constraintBottom_toBottomOf="@+id/btn_add3"
                     app:layout_constraintStart_toStartOf="@+id/ima_add_icon4" />
-
-                <Button
-                    android:id="@+id/btn_add3"
-                    android:layout_width="300dp"
-                    android:layout_height="70dp"
-                    android:layout_marginStart="32dp"
-                    android:layout_marginTop="24dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.03"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/btn_add2"
-                    tools:visibility="invisible" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>

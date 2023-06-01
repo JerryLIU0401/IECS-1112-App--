@@ -15,6 +15,15 @@
             android:name=".PaymentManagerActivity"
             android:exported="false" />
         <activity
+            android:name=".Payment"
+            android:exported="false" />
+        <activity
+            android:name=".Address"
+            android:exported="false" />
+        <activity
+            android:name=".CreditCard"
+            android:exported="false" />
+        <activity
             android:name=".ForgotPasswordActivity"
             android:exported="false" />
         <activity
@@ -40,6 +49,18 @@
             android:exported="false" />
         <activity
             android:name=".MyOrderActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AboutUsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PrivacyPolicyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TermActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MakeAnOrderActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

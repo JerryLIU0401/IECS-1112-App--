@@ -72,7 +72,8 @@ public class AccountDatabaseHandler {
     }
 
     public boolean isMailExist(String mail) {
-        Cursor cursor = db.rawQuery("SELECT mail From Account WHERE mail=" + mail, null, null);
+        String newMail = "'" + mail + "'";
+        Cursor cursor = db.rawQuery("SELECT mail From Account WHERE mail = " + newMail, null, null);
         if (cursor.getCount() == 1) {
             return true;
         } else {

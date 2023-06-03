@@ -13,6 +13,7 @@ public class TermActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         setContentView(R.layout.activity_term);
         super.onCreate(savedInstanceState);
+        getSupportActionBar().hide();
 
         ibRet = findViewById(R.id.ib_return);
 

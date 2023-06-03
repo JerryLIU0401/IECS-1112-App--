@@ -28,6 +28,7 @@ public class Address extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_address);
+        getSupportActionBar().hide();
 
         ibRet = findViewById(R.id.ib_return);
         ibsearch = findViewById(R.id.ib_addr_search);

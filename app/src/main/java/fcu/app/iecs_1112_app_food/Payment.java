@@ -27,6 +27,7 @@ public class Payment extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_payment);
+        getSupportActionBar().hide();
 
         ibRet = findViewById(R.id.ib_return);
         ibAddr = findViewById(R.id.ib_addr_ra);
@@ -36,6 +37,8 @@ public class Payment extends AppCompatActivity {
         tvPrice = findViewById(R.id.tv_price);
         tvCardNum = findViewById(R.id.tv_card_num);
         btnOrder = findViewById(R.id.btn_order);
+
+        tvPrice.setText(MyOrderActivity.tvTotalPrice.getText().toString());
         View.OnClickListener ibListener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {

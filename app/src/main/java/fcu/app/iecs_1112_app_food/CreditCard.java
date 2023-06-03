@@ -29,6 +29,7 @@ public class CreditCard extends AppCompatActivity {
     protected void onCreate( Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_credit_card);
+        getSupportActionBar().hide();
 
         ibRet = findViewById(R.id.ib_return);
         ibPlus = findViewById(R.id.ib_plus_method);

@@ -14,6 +14,7 @@ public class MakeAnOrderActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         setContentView(R.layout.activity_make_an_order);
         super.onCreate(savedInstanceState);
+        getSupportActionBar().hide();
 
         ibRet = findViewById(R.id.ib_return);
 

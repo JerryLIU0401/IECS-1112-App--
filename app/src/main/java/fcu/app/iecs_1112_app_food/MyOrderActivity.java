@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,6 +18,7 @@ public class MyOrderActivity extends PageBarButton {
     private ListView lvFoods;
     private Button btnPay;
     private Button btnCancel;
+    public static TextView tvTotalPrice;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +32,8 @@ public class MyOrderActivity extends PageBarButton {
 
         btnPay = findViewById(R.id.btn_pay);
         btnCancel = findViewById(R.id.btn_cancel_pay);
+        tvTotalPrice = findViewById(R.id.tv_total_price);
+
 
 
         List<FoodItem> foods = new ArrayList<FoodItem>();

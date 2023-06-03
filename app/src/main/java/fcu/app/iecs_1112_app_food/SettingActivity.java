@@ -32,7 +32,6 @@ public class SettingActivity extends PageBarButton {
         setPageBarBtnClickListener(SettingActivity.this);
         setValuebyId();
 
-
         View.OnClickListener onClickEditProfileListener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {

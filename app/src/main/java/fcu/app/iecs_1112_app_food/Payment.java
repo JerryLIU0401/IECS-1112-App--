@@ -63,6 +63,7 @@ public class Payment extends AppCompatActivity {
         View.OnClickListener btnListener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                MyOrderActivity.ifOrder = true;
                 Intent intent = new Intent();
                 intent.setClass(Payment.this, MakeAnOrderActivity.class);
                 startActivity(intent);

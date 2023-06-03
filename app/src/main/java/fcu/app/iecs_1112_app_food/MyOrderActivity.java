@@ -1,5 +1,6 @@
 package fcu.app.iecs_1112_app_food;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -17,8 +18,9 @@ public class MyOrderActivity extends PageBarButton {
 
     private ListView lvFoods;
     private Button btnPay;
-    private Button btnCancel;
+    private ImageButton ibOrder;
     public static TextView tvTotalPrice;
+    public static Boolean ifOrder = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +33,7 @@ public class MyOrderActivity extends PageBarButton {
         lvFoods = findViewById(R.id.lv_foods);
 
         btnPay = findViewById(R.id.btn_pay);
-        btnCancel = findViewById(R.id.btn_cancel_pay);
+        ibOrder = findViewById(R.id.ib_order);
         tvTotalPrice = findViewById(R.id.tv_total_price);
 
 
@@ -54,14 +56,19 @@ public class MyOrderActivity extends PageBarButton {
                 startActivity(intent2);
             }
         };
-        View.OnClickListener onClickCancelPayListener = new View.OnClickListener() {
+        View.OnClickListener onClickOrderListener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MyOrderActivity.this, MainActivity.class);
-                startActivity(intent);
+                if(ifOrder == false) {
+                    Intent intent = new Intent(MyOrderActivity.this, NoOrderActivity.class);
+                    startActivity(intent);
+                }else {
+                    Intent intent = new Intent(MyOrderActivity.this, MakeAnOrderActivity.class);
+                    startActivity(intent);
+                }
             }
         };
         btnPay.setOnClickListener(onClickPayListener);
-        btnCancel.setOnClickListener(onClickCancelPayListener);
+        ibOrder.setOnClickListener(onClickOrderListener);
     }
 }

@@ -52,7 +52,7 @@
             android:id="@+id/ib_return"
             android:layout_width="41dp"
             android:layout_height="35dp"
-            android:layout_marginStart="20dp"
+            android:layout_marginStart="40dp"
             android:layout_marginTop="20dp"
             android:layout_weight="1"
             android:background="@drawable/ic_return"
@@ -60,13 +60,14 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/tv_terms"
-            android:layout_width="300dp"
+            android:id="@+id/tv_make_an_order"
+            android:layout_width="129dp"
             android:layout_height="40dp"
             android:layout_marginStart="141dp"
             android:layout_marginTop="16dp"
-            android:layout_marginEnd="110dp"
-            android:text="Terms and conditions"
+            android:layout_marginEnd="141dp"
+            android:text="Order"
+            android:textAlignment="center"
             android:textSize="30sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -76,9 +77,8 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:scrollbars="none"
+        android:layout_width="365dp"
+        android:layout_height="643dp"
         app:layout_constraintBottom_toBottomOf="@id/center_rectangle"
         app:layout_constraintEnd_toEndOf="@id/center_rectangle"
         app:layout_constraintStart_toStartOf="@id/center_rectangle"
@@ -96,15 +96,27 @@
 
 
                 <TextView
-                    android:id="@+id/tv_conditions"
-                    android:layout_width="290dp"
-                    android:layout_height="638dp"
-                    android:layout_marginTop="30dp"
-                    android:text="Published: 21 April 2023\n\nTerms of Use\n\nCompany Name: FOODAPP TAIWAN CO., LTD.\n\nRepresentative: John Fang\n\nRegistration No. of Food Business: A-153926705-00000-5\n\nThese Terms of Use (“Terms”) govern your use of the websites and mobile applications provided by foodpanda (or referred to as “us”) (collectively the “Platforms”). Please read these Terms carefully. By accessing and using the service of Platforms, you agree that you have read, understood, and accepted the Terms including any additional terms and conditions and any policies referenced herein, available on the Platforms or available by hyperlink. If you do not agree or fall within the Terms, please do not use the Platforms.\n\nThe Platforms may be used by (i) natural persons who have reached 18 years of age and (ii) corporate legal entities, e.g. companies. Where applicable, these Terms shall be subject to country-specific provisions as set out herein.\n\nFor users below the age of 18, you must obtain consent from parent(s) or legal guardian(s), who by accepting these Terms shall agree to take responsibility for your actions and any charges associated with your use of the Platforms and/or purchase of Goods. If you do not have consent from your parent(s) or legal guardian(s), you must stop using/accessing the Platforms immediately.\n\nFoodAPP reserves the right to change or modify these Terms (including our policies which are incorporated into these Terms) at any time. You are strongly recommended to read these Terms regularly. You will be deemed to have agreed to the amended Terms by your continued use of the Platforms following the date on which the amended Terms are posted."
+                    android:id="@+id/tv_messeges_no_order"
+                    android:layout_width="365dp"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="60dp"
+                    android:text="There is no order."
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="34sp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.493"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/ima_question"
+                    android:layout_width="300dp"
+                    android:layout_height="425dp"
+                    android:layout_marginTop="150dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/question" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
     </ScrollView>

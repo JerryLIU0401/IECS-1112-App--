@@ -66,6 +66,9 @@
             android:name=".MakeAnOrderActivity"
             android:exported="false" />
         <activity
+            android:name=".NoOrderActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

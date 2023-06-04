@@ -23,7 +23,7 @@ public class RegisterActivity extends AppCompatActivity {
     private EditText et_password;
     private EditText et_password_confirm;
     private EditText et_mail;
-    private String userIcon;
+    private Bitmap userIcon;
     private ImageButton userIcon_btn;
     private AccountDatabaseHandler databaseHandler;
     private ActivityResultLauncher<String> imgPickerLauncher;
@@ -40,6 +40,7 @@ public class RegisterActivity extends AppCompatActivity {
         et_password_confirm = findViewById(R.id.et_password_confirm_registerpage);
         et_mail = findViewById(R.id.et_mail_registerpage);
         userIcon_btn = findViewById(R.id.register_usericon);
+//        userIcon = findViewById(R.drawable.usericon);
         databaseHandler = new AccountDatabaseHandler(this);
         databaseHandler.open();
 
@@ -59,7 +60,6 @@ public class RegisterActivity extends AppCompatActivity {
                 } else if (databaseHandler.isMailExist(et_mail.getText().toString())) {
                     Toast.makeText(RegisterActivity.this, "Mail had been used", Toast.LENGTH_LONG).show();
                 } else {
-                    userIcon = "demoIcon";
                     databaseHandler.addAccount(et_account.getText().toString(), et_mail.getText().toString(), et_password.getText().toString(), userIcon);
                     finish();
                 }
@@ -96,11 +96,13 @@ public class RegisterActivity extends AppCompatActivity {
     private void addImageButtonToView(Uri imageUri) {
         try {
             Bitmap bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), imageUri); //將 URI 轉換為 Bitmap 物件
+            userIcon = bitmap;
             userIcon_btn.setImageBitmap(bitmap);
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+
 
 
 }

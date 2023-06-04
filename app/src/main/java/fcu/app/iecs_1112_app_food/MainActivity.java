@@ -13,9 +13,11 @@ public class MainActivity extends AppCompatActivity {
 
     private Button btnDemoMyOrder;
     private Button btnDropTable;
+    private Button btnDropRestaurant;
 
     private static final int PICK_IMAGE_REQUEST = 1;
     private AccountDatabaseHandler accountDatabaseHandler;
+    private RestaurantDatabaseHandler restaurantDatabaseHandler;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,11 +26,21 @@ public class MainActivity extends AppCompatActivity {
 
         btnDemoMyOrder = findViewById(R.id.btn_demo_my_order);
         btnDropTable = findViewById(R.id.drop_table_btn);
+        btnDropRestaurant = findViewById(R.id.drop_restaurant);
         View.OnClickListener onClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, LoginActivity.class);
                 startActivity(intent);
+            }
+        };
+
+        View.OnClickListener onDropRTableClickListener = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                restaurantDatabaseHandler = new RestaurantDatabaseHandler(MainActivity.this);
+                restaurantDatabaseHandler.open();
+                restaurantDatabaseHandler.dropTable();
             }
         };
 
@@ -44,6 +56,6 @@ public class MainActivity extends AppCompatActivity {
 
         btnDemoMyOrder.setOnClickListener(onClickListener);
         btnDropTable.setOnClickListener(onDropTableClickListener);
-
+        btnDropRestaurant.setOnClickListener(onDropRTableClickListener);
     }
 }

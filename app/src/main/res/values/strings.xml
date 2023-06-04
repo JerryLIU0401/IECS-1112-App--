@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">IECS-1112-App-Food</string>
+    <string-array name="type_array">
+        <item>Fastfood</item>
+        <item>Drink</item>
+        <item>Chinese</item>
+    </string-array>
 </resources>

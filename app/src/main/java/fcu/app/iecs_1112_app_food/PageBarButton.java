@@ -44,6 +44,7 @@ public class PageBarButton extends AppCompatActivity {
             public void onClick(View view) {
                 if (context.getClass() != SettingActivity.class) {
                     Intent intent = new Intent(context, SettingActivity.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                     context.startActivity(intent);
                 }
             }
@@ -54,6 +55,7 @@ public class PageBarButton extends AppCompatActivity {
             public void onClick(View view) {
                 if (context.getClass() != MainPageActivity.class) {
                     Intent intent = new Intent(context, MainPageActivity.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                     context.startActivity(intent);
                 }
             }
@@ -76,6 +78,7 @@ public class PageBarButton extends AppCompatActivity {
             public void onClick(View view) {
                 if (context.getClass() != MyOrderActivity.class) {
                     Intent intent = new Intent(context, MyOrderActivity.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                     context.startActivity(intent);
                 }
             }

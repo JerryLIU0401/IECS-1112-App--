@@ -19,7 +19,6 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
-
     <View
         android:id="@+id/cover_rectangle_top"
         android:layout_width="wrap_content"
@@ -29,7 +28,6 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/rectangles_top" />
-
 
     <View
         android:id="@+id/center_rectangle"
@@ -74,7 +72,21 @@
             android:textAlignment="center"
             android:textSize="24sp"
             android:textStyle="bold" />
+
     </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/ib_order"
+        android:layout_width="40dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="23dp"
+        android:layout_weight="1"
+        android:backgroundTint="#00000000"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/order" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -217,48 +229,59 @@
         app:layout_constraintBottom_toTopOf="@+id/tv_total"
         app:layout_constraintEnd_toEndOf="@+id/center_rectangle"
         app:layout_constraintStart_toStartOf="@+id/center_rectangle"
-        app:layout_constraintTop_toBottomOf="@+id/cover_rectangle_top" />
+        app:layout_constraintTop_toTopOf="@+id/center_rectangle"
+        tools:ignore="MissingConstraints,Suspicious0dp" />
+
+
+    <View
+        android:id="@+id/total_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="520dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="@+id/center_rectangle"
+        app:layout_constraintStart_toStartOf="@+id/center_rectangle"
+        app:layout_constraintTop_toTopOf="@+id/center_rectangle"
+        tools:ignore="MissingConstraints,Suspicious0dp" />
 
 
     <Button
         android:id="@+id/btn_pay"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
-        android:layout_marginBottom="24dp"
+        android:layout_width="88dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="16dp"
         android:backgroundTint="@color/green"
         android:text="pay"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
-        app:layout_constraintStart_toStartOf="@+id/center_rectangle" />
-
-
-    <Button
-        android:id="@+id/btn_cancel_pay"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="64dp"
-        android:layout_marginBottom="24dp"
-        android:backgroundTint="@color/red"
-        android:text="cancel"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
-        app:layout_constraintEnd_toEndOf="@+id/center_rectangle" />
+        app:layout_constraintEnd_toEndOf="@+id/total_view"
+        app:layout_constraintStart_toStartOf="@+id/total_view"
+        app:layout_constraintTop_toTopOf="@+id/total_view"
+        app:layout_constraintVertical_bias="0.68" />
 
 
     <TextView
         android:id="@+id/tv_total"
-        android:layout_width="0dp"
-        android:layout_height="40dp"
-        android:layout_marginBottom="96dp"
-        android:text="Total: 0 NTD"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
-        app:layout_constraintEnd_toEndOf="@+id/center_rectangle"
-        app:layout_constraintStart_toStartOf="@+id/center_rectangle" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginBottom="10dp"
+        android:text="Total"
+        android:textSize="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_pay"
+        app:layout_constraintStart_toStartOf="parent" />
 
-
-
-
+    <TextView
+        android:id="@+id/tv_total_price"
+        android:layout_width="106dp"
+        android:layout_height="43dp"
+        android:layout_marginEnd="80dp"
+        android:text="$ 0.0"
+        android:textColorHighlight="@color/black"
+        android:textColorHint="@color/black"
+        android:textSize="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="562dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

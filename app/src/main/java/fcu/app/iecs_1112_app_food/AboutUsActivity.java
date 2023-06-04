@@ -13,6 +13,7 @@ public class AboutUsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         setContentView(R.layout.activity_about_us);
         super.onCreate(savedInstanceState);
+        getSupportActionBar().hide();
 
         ibRet = findViewById(R.id.ib_return);
 

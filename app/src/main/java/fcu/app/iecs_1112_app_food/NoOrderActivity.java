@@ -1,17 +1,18 @@
 package fcu.app.iecs_1112_app_food;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class TermActivity extends AppCompatActivity {
+public class NoOrderActivity extends AppCompatActivity {
     private ImageButton ibRet;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        setContentView(R.layout.activity_term);
+        setContentView(R.layout.activity_make_an_order);
         super.onCreate(savedInstanceState);
         getSupportActionBar().hide();
 
@@ -20,7 +21,9 @@ public class TermActivity extends AppCompatActivity {
         View.OnClickListener ibListener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
+                Intent intent = new Intent();
+                intent.setClass(NoOrderActivity.this, MyOrderActivity.class);
+                startActivity(intent);
             }
         };
 

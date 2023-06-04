@@ -29,9 +29,4 @@ public class EditProfileActivity extends PageBarButton {
         ibRet.setOnClickListener(ibListener);
     }
 
-    @Override
-    protected void onPause() {
-        super.onPause();
-        finish();
-    }
 }

@@ -45,7 +45,7 @@ public class MyOrderActivity extends PageBarButton {
         foods.add(new FoodItem(R.drawable.spaghetti, "spaghetti", 67));
         foods.add(new FoodItem(R.drawable.strawberry, "strawberry", 46));
 
-        ListViewAdapter adapter = new ListViewAdapter(MyOrderActivity.this, foods);
+        ListViewAdapter adapter = new ListViewAdapter(this, foods);
         lvFoods.setAdapter(adapter);
 
         View.OnClickListener onClickPayListener = new View.OnClickListener() {

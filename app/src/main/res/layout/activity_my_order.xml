@@ -44,7 +44,6 @@
         app:layout_constraintVertical_bias="1.0" />
 
 
-
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
@@ -222,12 +221,12 @@
 
     <ListView
         android:id="@+id/lv_foods"
-        android:layout_width="match_parent"
+        android:layout_width="389dp"
         android:layout_height="0dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/total_view"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="96dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_total"
         app:layout_constraintEnd_toEndOf="@+id/center_rectangle"
         app:layout_constraintStart_toStartOf="@+id/center_rectangle"
         app:layout_constraintTop_toTopOf="@+id/center_rectangle"

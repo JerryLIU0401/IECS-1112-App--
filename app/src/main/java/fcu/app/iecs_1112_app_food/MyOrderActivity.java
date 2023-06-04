@@ -59,11 +59,12 @@ public class MyOrderActivity extends PageBarButton {
         View.OnClickListener onClickOrderListener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent intent;
                 if(ifOrder == false) {
-                    Intent intent = new Intent(MyOrderActivity.this, NoOrderActivity.class);
+                    intent = new Intent(MyOrderActivity.this, NoOrderActivity.class);
                     startActivity(intent);
-                }else {
-                    Intent intent = new Intent(MyOrderActivity.this, MakeAnOrderActivity.class);
+                }else if(ifOrder == true) {
+                    intent = new Intent(MyOrderActivity.this, MakeAnOrderActivity.class);
                     startActivity(intent);
                 }
             }

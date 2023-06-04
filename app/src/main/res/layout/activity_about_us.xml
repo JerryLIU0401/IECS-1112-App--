@@ -93,10 +93,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="638dp">
 
-
-
-
-
+                <TextView
+                    android:id="@+id/tv_conditions"
+                    android:layout_width="290dp"
+                    android:layout_height="638dp"
+                    android:layout_marginTop="30dp"
+                    android:text="foodApp is the most convenient online food ordering site in Taiwan, connecting people with over 800 of the best restaurants around them.\n\nWe believe food is a pleasure and food ordering should be fast and definitely fun experience. Ordering with foodpanda is as easy as a 4-step recipe:\n\n1. Search\n\nFind restaurants that deliver to you by entering your address\n\n2. Choose\n\nBrowse hundreds of menus to find the food you like\n\n3. Pay\n\nPay online with Visa, Mastercard or JCB, or cash on delivery\n\n4. Enjoy\n\nFood is prepared and delivered to your door"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.493"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
     </ScrollView>

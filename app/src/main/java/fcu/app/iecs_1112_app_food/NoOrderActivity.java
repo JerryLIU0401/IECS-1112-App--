@@ -12,7 +12,7 @@ public class NoOrderActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        setContentView(R.layout.activity_make_an_order);
+        setContentView(R.layout.activity_no_order);
         super.onCreate(savedInstanceState);
         getSupportActionBar().hide();
 

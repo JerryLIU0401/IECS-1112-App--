@@ -277,11 +277,12 @@
         android:layout_width="106dp"
         android:layout_height="43dp"
         android:layout_marginEnd="80dp"
+        android:layout_marginBottom="10dp"
         android:text="$ 0.0"
         android:textColorHighlight="@color/black"
         android:textColorHint="@color/black"
         android:textSize="32dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="562dp" />
+        app:layout_constraintBottom_toTopOf="@+id/btn_pay"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

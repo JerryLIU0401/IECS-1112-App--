@@ -1,10 +1,13 @@
 package fcu.app.iecs_1112_app_food;
 
 import android.annotation.SuppressLint;
+import android.content.BroadcastReceiver;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class SettingActivity extends PageBarButton {
@@ -20,8 +23,11 @@ public class SettingActivity extends PageBarButton {
     private TextView tvChangePass;
     private TextView tvPaymentMethod;
     private TextView tvPaymentManager;
+    private TextView tvUserName;
+    private ImageView ivUserIcon;
     private ImageButton btnPaymentManager;
-
+    private BroadcastReceiver broadcastReceiver;
+    private int userId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +37,6 @@ public class SettingActivity extends PageBarButton {
         getSupportActionBar().hide();
         setPageBarBtnClickListener(SettingActivity.this);
         setValuebyId();
-
         View.OnClickListener onClickEditProfileListener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -105,7 +110,10 @@ public class SettingActivity extends PageBarButton {
 
     }
 
+
     public void setValuebyId() {
+        ivUserIcon = findViewById(R.id.iv_icon_setting);
+        tvUserName = findViewById(R.id.tv_userIcon);
         btnEditProfile = findViewById(R.id.edit_profile_btn);
         btnChangePass = findViewById(R.id.change_password_btn);
         btnPaymentMethod = findViewById(R.id.payment_method_btn);

@@ -22,35 +22,33 @@ public class ListViewAdapter extends BaseAdapter {
 
     @Override
     public int getCount() {
-        return 0;
+        return listFoods.size();
     }
 
     @Override
     public Object getItem(int i) {
-        return null;
+        return listFoods.get(i);
     }
 
     @Override
     public long getItemId(int i) {
-        return 0;
+        return i;
     }
 
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
         if(view == null){
             view = LayoutInflater.from(context).inflate(R.layout.food_item_layout, viewGroup, false);
-
         }
         FoodItem food = listFoods.get(i);
-        ImageView iv = view.findViewById(R.id.iv_food);
-        iv.setImageResource(food.getImageId());
-        iv.setScaleType(ImageView.ScaleType.FIT_CENTER);
+        ImageView iv = view.findViewById(R.id.iv_food_shopcar);
+        iv.setImageBitmap(food.getImage());
+        iv.setScaleType(ImageView.ScaleType.CENTER_CROP);
         //iv.setLayoutParams(new ViewGroup.LayoutParams(32, 24));
 
-        TextView tvFoodName = view.findViewById(R.id.tv_food_name);
+        TextView tvFoodName = view.findViewById(R.id.tv_food_name_shopcar);
         tvFoodName.setText(food.getFoodName());
-
-        TextView tvFoodPrice = view.findViewById(R.id.tv_food_price);
+        TextView tvFoodPrice = view.findViewById(R.id.tv_food_price_shopcar);
         tvFoodPrice.setText(String.valueOf(food.getFoodPrice()));
         return view;
     }

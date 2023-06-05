@@ -1,22 +1,26 @@
 package fcu.app.iecs_1112_app_food;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+
 public class FoodItem {
-    private int imageId;
+    private byte[] image;
     private String foodName;
     private int foodPrice;
 
-    public FoodItem(int imageId, String foodName, int foodPrice) {
-        this.imageId = imageId;
+    public FoodItem(byte[] image, String foodName, int foodPrice) {
+        this.image = image;
         this.foodName = foodName;
         this.foodPrice = foodPrice;
     }
 
-    public int getImageId() {
-        return imageId;
+    public Bitmap getImage() {
+        Bitmap bitmap = BitmapFactory.decodeByteArray(image, 0, image.length);
+        return bitmap;
     }
 
-    public void setImageId(int imageId) {
-        this.imageId = imageId;
+    public void setImage(byte[] image) {
+        this.image = image;
     }
 
     public String getFoodName() {

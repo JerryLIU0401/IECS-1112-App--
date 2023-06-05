@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -44,7 +45,7 @@ public class MyOrderActivity extends PageBarButton {
         lvFoods = findViewById(R.id.lv_foods);
         btnPay = findViewById(R.id.btn_pay);
 
-        btnCancel = findViewById(R.id.btn_cancel_pay);
+        //btnCancel = findViewById(R.id.btn_cancel_pay);
         tv_total = findViewById(R.id.tv_total);
         setPageBarBtnClickListener(MyOrderActivity.this);
 
@@ -70,7 +71,7 @@ public class MyOrderActivity extends PageBarButton {
                 intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                 startActivity(intent);
 
-                Intent intent;
+                //Intent intent;
                 if(ifOrder == false) {
                     intent = new Intent(MyOrderActivity.this, NoOrderActivity.class);
                     startActivity(intent);
@@ -84,7 +85,7 @@ public class MyOrderActivity extends PageBarButton {
         lvFoods.setAdapter(listViewAdapter);
         btnPay.setOnClickListener(onClickPayListener);
 
-        btnCancel.setOnClickListener(onClickCancelPayListener);
+        //btnCancel.setOnClickListener(onClickCancelPayListener);
         enableLongPressToDelete();
 
         ibOrder.setOnClickListener(onClickOrderListener);

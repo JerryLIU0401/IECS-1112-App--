@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:background="@color/grey"
     android:scrollbarThumbHorizontal="@color/white"
     tools:context=".MyOrderActivity">
@@ -76,8 +77,9 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ScrollView
-        android:layout_width="365dp"
-        android:layout_height="643dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scrollbars="none"
         app:layout_constraintBottom_toBottomOf="@id/center_rectangle"
         app:layout_constraintEnd_toEndOf="@id/center_rectangle"
         app:layout_constraintStart_toStartOf="@id/center_rectangle"
@@ -94,9 +96,16 @@
                 android:layout_height="638dp">
 
 
-
-
-
+                <TextView
+                    android:id="@+id/tv_conditions"
+                    android:layout_width="290dp"
+                    android:layout_height="638dp"
+                    android:layout_marginTop="30dp"
+                    android:text="Published: 21 April 2023\n\nTerms of Use\n\nCompany Name: FOODAPP TAIWAN CO., LTD.\n\nRepresentative: John Fang\n\nRegistration No. of Food Business: A-153926705-00000-5\n\nThese Terms of Use (“Terms”) govern your use of the websites and mobile applications provided by foodpanda (or referred to as “us”) (collectively the “Platforms”). Please read these Terms carefully. By accessing and using the service of Platforms, you agree that you have read, understood, and accepted the Terms including any additional terms and conditions and any policies referenced herein, available on the Platforms or available by hyperlink. If you do not agree or fall within the Terms, please do not use the Platforms.\n\nThe Platforms may be used by (i) natural persons who have reached 18 years of age and (ii) corporate legal entities, e.g. companies. Where applicable, these Terms shall be subject to country-specific provisions as set out herein.\n\nFor users below the age of 18, you must obtain consent from parent(s) or legal guardian(s), who by accepting these Terms shall agree to take responsibility for your actions and any charges associated with your use of the Platforms and/or purchase of Goods. If you do not have consent from your parent(s) or legal guardian(s), you must stop using/accessing the Platforms immediately.\n\nFoodAPP reserves the right to change or modify these Terms (including our policies which are incorporated into these Terms) at any time. You are strongly recommended to read these Terms regularly. You will be deemed to have agreed to the amended Terms by your continued use of the Platforms following the date on which the amended Terms are posted."
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.493"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
     </ScrollView>

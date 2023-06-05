@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:background="@color/grey"
     android:scrollbarThumbHorizontal="@color/white"
     tools:context=".MyOrderActivity">
@@ -95,9 +95,30 @@
                 android:layout_height="638dp">
 
 
+                <TextView
+                    android:id="@+id/tv_messeges"
+                    android:layout_width="365dp"
+                    android:layout_height="85dp"
+                    android:layout_marginTop="40dp"
+                    android:text="Your order is preparing..."
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="34sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-
-
+                <ImageView
+                    android:id="@+id/ima_cooking"
+                    android:layout_width="300dp"
+                    android:layout_height="425dp"
+                    android:layout_marginTop="150dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/cooking"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
     </ScrollView>

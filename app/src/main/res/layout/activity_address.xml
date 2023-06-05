@@ -6,8 +6,6 @@
     android:layout_height="match_parent"
     android:background="@color/grey"
     android:scrollbarThumbHorizontal="@color/white"
-    android:screenOrientation="portrait"
-    android:windowSoftInputMode="adjustPan"
     tools:context=".MyOrderActivity">
 
     <View
@@ -136,7 +134,7 @@
                     android:layout_width="300dp"
                     android:layout_height="70dp"
                     android:layout_marginTop="30dp"
-                    android:visibility="invisible"
+                    android:background="#00000000"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tv_current" />
@@ -182,7 +180,7 @@
                     android:layout_width="300dp"
                     android:layout_height="70dp"
                     android:layout_marginTop="30dp"
-                    android:visibility="invisible"
+                    android:background="#00000000"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tv_recent" />
@@ -217,7 +215,7 @@
                     android:layout_height="70dp"
                     android:layout_marginStart="32dp"
                     android:layout_marginTop="24dp"
-                    android:visibility="invisible"
+                    android:background="#00000000"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.03"
                     app:layout_constraintStart_toStartOf="parent"

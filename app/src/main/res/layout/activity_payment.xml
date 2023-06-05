@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:background="@color/grey"
     android:scrollbarThumbHorizontal="@color/white"
     tools:context=".MyOrderActivity">
@@ -151,10 +151,11 @@
                     android:layout_height="50dp"
                     android:layout_marginStart="32dp"
                     android:layout_marginBottom="20dp"
+                    android:scaleType="centerCrop"
                     android:visibility="visible"
                     app:layout_constraintBottom_toTopOf="@+id/tv_total"
                     app:layout_constraintStart_toStartOf="parent"
-                    tools:srcCompat="@drawable/jcb" />
+                    app:srcCompat="@drawable/jcb" />
 
                 <TextView
                     android:id="@+id/tv_card_num"
@@ -199,7 +200,7 @@
                     android:layout_height="43dp"
                     android:layout_marginEnd="64dp"
                     android:layout_marginBottom="20dp"
-                    android:text="$ 300.0"
+                    android:text="$ 0.0"
                     android:textColorHighlight="@color/black"
                     android:textColorHint="@color/black"
                     android:textSize="32dp"

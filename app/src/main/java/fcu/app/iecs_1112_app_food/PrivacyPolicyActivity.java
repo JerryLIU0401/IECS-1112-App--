@@ -13,6 +13,7 @@ public class PrivacyPolicyActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         setContentView(R.layout.activity_privacy_policy);
         super.onCreate(savedInstanceState);
+        getSupportActionBar().hide();
 
         ibRet = findViewById(R.id.ib_return);
 
